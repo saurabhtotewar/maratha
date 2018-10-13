@@ -1,0 +1,3371 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head> 
+
+<title>NaukriJob - Jobs - freePost - Recruitment - Job Search - Employment - Job Vacancies - NaukriJob -  </title>
+
+<meta name="description" content="Connect with 30,000+ employers.
+ Apply to Millions of job opportunities across top companies, industries &amp; locations on Indiaâs No.1 job site. Apply online. Post CV today.">
+<link rel="shortcut icon" href="favicon.ico"/>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="job search,find jobs,jobs in pune, it jobs,jobs by location" />
+
+
+<!-- sweet alert -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.css"/>
+   
+<!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+
+<script type="text/javascript">
+document.createElement("header");
+document.createElement("footer");
+</script>
+<title>Candidate Registration</title>
+<link rel="shortcut icon" href="favicon.ico"/>	
+
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!-- keyskills -->
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+     <script src="select2.js"></script>
+     <script src="js/data.js"></script>
+    <link href="css/select2.css" rel="stylesheet"/>
+    
+  
+<!-- //city/state     -->
+<script src="js/keyreg.js"></script>
+<script src="js/skillreg.js"></script>
+
+<!-- //conform password     -->
+<script type="text/javascript">  
+function matchpass(){  
+var firstpassword=document.f1.password.value;  
+var secondpassword=document.f1.password2.value;  
+  
+if(firstpassword==secondpassword){  
+return true;  
+}  
+else{  
+alert("password must be same!");  
+return false;  
+}  
+}  
+</script> 
+
+
+
+<style>
+
+.select2-container-multi .select2-choices {
+    min-height: 55px;
+}
+
+
+span.multiselect-native-select {
+	position: relative
+}
+span.multiselect-native-select select {
+	border: 0!important;
+	clip: rect(0 0 0 0)!important;
+	height: 1px!important;
+	margin: -1px -1px -1px -3px!important;
+	overflow: hidden!important;
+	padding: 0!important;
+	position: absolute!important;
+	width: 1px!important;
+	left: 50%;
+	top: 30px
+}
+.multiselect-container {
+
+	padding: 0
+}
+.multiselect-container .input-group {
+	margin: 5px
+}
+.multiselect-container>li {
+	padding: 0
+}
+.multiselect-container>li>a.multiselect-all label {
+	font-weight: 700
+}
+.multiselect-container>li.multiselect-group label {
+	margin: 0;
+	padding: 3px 20px 3px 20px;
+	height: 100%;
+	font-weight: 700
+}
+
+.multiselect-container>li>a {
+	padding: 0
+}
+.multiselect-container>li>a>label {
+	margin: 0;
+	height: 100%;
+	cursor: pointer;
+	font-weight: 400;
+	padding: 3px 0 3px 30px
+}
+.multiselect-container>li>a>label.radio, .multiselect-container>li>a>label.checkbox {
+	margin: 0
+}
+.multiselect-container>li>a>label>input[type=checkbox] {
+	margin-bottom: 5px
+}
+.btn-group>.btn-group:nth-child(2)>.multiselect.btn {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px
+}
+.form-inline .multiselect-container label.checkbox, .form-inline .multiselect-container label.radio {
+	padding: 3px 20px 3px 40px
+}
+.form-inline .multiselect-container li a label.checkbox input[type=checkbox], .form-inline .multiselect-container li a label.radio input[type=radio] {
+	margin-left: -20px;
+	margin-right: 0
+}
+
+.dropdown-menu {
+  width:516px;
+overflow-x:auto;
+height:946%;
+    position: absolute;
+    top: 90%;
+    left: -43px;
+   
+    padding: 0px 0px;
+    margin: 3px 0 0;
+    
+}
+</style>
+
+
+<style>
+.field-error .control-label,
+.field-error .help-block,
+.field-error .form-control-feedback {
+    color: #ff0039;
+}
+
+.field-success .control-label,
+.field-success .help-block,
+.field-success .form-control-feedback {
+    color: #2780e3;
+}
+</style>
+<style>
+
+
+
+.select2-container-multi .select2-choices .select2-search-field input {
+    padding: 2px;
+    margin: 1px 0;
+border:1px solid white;
+    font-family: sans-serif;
+    font-size: 100%;
+    color: #666;
+    outline: 0;
+   
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+    background: transparent !important;
+}
+
+.btn {
+   
+   align-items: center;
+}
+
+.book-form input[type="text"]{
+
+border: 2px solid #fff;
+}
+
+/* input:invalid {
+    border: 1px solid red;
+}
+input:valid {
+    border: 1px solid green;
+} */
+
+
+
+
+.btn .caret {
+    margin-left: 345px;
+}
+</style>
+	</head>
+	
+	
+	<body>
+	
+<jsp:include page="common_Head.jsp"></jsp:include>
+<hr>
+	<br>
+	<div class="container">
+	<div class="row main">
+	<div class="main-login main-center">
+	<h4 align="center"> <b>Registration For bright Career </b></h4>
+	<br>
+	<form:form modelAttribute="request" id="loginForm" action="./candidateReg" enctype="multipart/form-data" name="f1"  onsubmit="return Validate(this);">
+
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">Your Name * </label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+	<form:input type="text" cssErrorClass="error" onkeypress="return onKeyValidate(event,alpha);" class="form-control"  path="name" id="name"  placeholder="Enter Your Name" data-error="Bruh,  invalid Name " required="required"/>
+	
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="inputEmail" class="cols-sm-2 control-label">Your Email * </label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+	<form:input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" path="email" id="inputEmail"  placeholder="Enter Your Email" data-error="Bruh, that email address is invalid"  required="required"/>
+	   
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="contact" class="cols-sm-2 control-label">Contact Number *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+	<form:input minlength="10"  maxlength="10" pattern="[789][0-9]{9}"   onkeypress="return onKeyValidate(event,numeric);" title="Enter 10 digit mobile number" class="form-control" path="contactNumber" id="phone"  placeholder="Enter Contact Number"  required="required"/>
+	
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="username" class="cols-sm-2 control-label">Address *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+	<form:input class="form-control" path="candidateAddress" id="username"  placeholder="Enter Your Address"  required="required"/>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	<div class="col-md-3 form-date-w3-agileits">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">State *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+	
+						        <div id="selection">
+						        <form:select class="form-control" id="listBox" onchange='select_district(this.value)' path="candidateState"  required="required" oninvalid="this.setCustomValidity('Please Select the State')" oninput="setCustomValidity('')"/>
+								</div>
+						</div>	
+						</div>
+						</div>
+						</div>		
+						
+						
+	<div class="col-md-3 form-date-w3-agileits">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">City *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-location-arrow" aria-hidden="true"></i></span>
+	  
+	   <form:select class="form-control"  id="secondlist" path="candidateCity"  required="required" oninvalid="this.setCustomValidity('Please Select the City')" oninput="setCustomValidity('')"/>
+	   </div>
+	   </div>
+	   </div>
+	   </div>
+								
+								<div id="dumdiv">
+                                     <a id="dum"></a>
+                                </div>
+	
+
+	                 <div class="col-md-6">
+                       <div class="form-group ">
+	                        <label for="confirm" class=" cols-sm-2 control-label">Date of Birth *</label>
+                            <div class="cols-sm-10">
+                                 <div class="input-group">
+	                                <span class="input-group-addon"><i class="fa fa-birthday-cake" aria-hidden="true"></i></span>
+                                    <form:input type="date" id="txtDate"  class="form-control"  path="dob" placeholder="DD/MM/YYYY (Enter Your DOB)"  required="required"/>
+                                   
+                                 </div>
+                             </div>
+                        </div>
+	                    </div>
+	 
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">Gender *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-male" aria-hidden="true"></i></span>
+	<form:select class="form-control" path="gender"  required="required" oninvalid="this.setCustomValidity('Please Select Gender')" oninput="setCustomValidity('')">
+	
+	<form:option value="" label="Select Gender"/>
+	<form:option value="Male" label="Male"/>
+	<form:option value="Female" label="Female"/>
+	<form:option value="Other" label="Other"/>
+	
+	
+	</form:select>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	
+	
+	
+ <div class="col-md-3 form-date-w3-agileits">
+ <div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">Qualification *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-suitcase" aria-hidden="true"></i></span>
+
+<form:select id="ddl" class="form-control"  onchange="configureDropDownLists(this,document.getElementById('ddl2'))" path="degree"  required="required" oninvalid="this.setCustomValidity('Please Select Qualification')" oninput="setCustomValidity('')">
+	
+<form:option value="" label="Select"/>
+<form:option value="Below" label="10+2 or Below"/> 
+<form:option value="BArch" label="B.Arch"/>
+<form:option value="BBABMS" label="BBA/BMS"/>
+<form:option value="BEd" label="B.Ed "/>
+<form:option value="BPharma" label="B.Pharma "/> 
+<form:option value="BSc" label="B.Sc"/> 
+<form:option value="BEBTech" label="BE/B.Tech"/> 
+<form:option value="BA" label="BA"/> 
+<form:option value="BCA" label="BCA"/> 
+<form:option value="Bcom" label="Bcom "/>
+<form:option value="BDS" label="BDS"/> 
+<form:option value="BHM" label="BHM"/>
+<form:option value="BVSC" label="BVSC"/> 
+<form:option value="CA" label="CA"/>
+<form:option value="CFA" label="CFA"/>
+<form:option value="CS" label="CS"/>
+<form:option value="CWACMA" label="CWA/CMA"/>
+<form:option value="Diploma" label="Diploma"/>
+<form:option value="IntegratedPG" label="Integrated PG"/>
+<form:option value="LLM" label="LLM"/>
+<form:option value="LLB" label="LLB"/>
+<form:option value="MA" label="MA"/>
+<form:option value="MCA" label="MCA"/>
+<form:option value="Mcom" label="Mcom"/>
+<form:option value="MEd" label="M.Ed "/>
+<form:option value="MPharm" label="M.Pharma"/>
+<form:option value="Msc" label="M.Sc "/>
+<form:option value="Mtech" label="M.Tech"/>
+<form:option value="MBAPGDM" label="MBA/PGDM"/>
+<form:option value="MBSS" label="MBSS "/>
+<form:option value="MDS" label="MDS "/>
+<form:option value="MDMS" label="MD/MS "/>
+<form:option value="MMH" label="MMH "/>
+<form:option value="MPhill" label="MPhill"/>
+<form:option value="MVSC" label="MVSC"/>
+
+<form:option value="PGDiploma" label="PG Diploma"/> 
+<form:option value="PHDoctorate" label="Ph.D/Doctorate "/>
+<form:option value="other" label="other"/>
+</form:select>
+	
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 form-date-w3-agileits">
+<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">Specialization *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-shield" aria-hidden="true"></i></span>
+
+
+<form:select id="ddl2" class="form-control"  path="specilization"  required="required" oninvalid="this.setCustomValidity('Please Select the Specialization')" oninput="setCustomValidity('')"><br>
+	<form:option value="" label="Select"/>
+	
+	</form:select>
+	
+	
+</div>
+</div>
+</div>
+</div>	
+	 
+	
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">University/Collage *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	
+	<span class="input-group-addon"><i class="fa fa-university" aria-hidden="true"></i></span>
+	
+	
+	<form:input class="form-control" onkeypress="return onKeyValidate(event,alpha);" path="university" id="collage"  placeholder="Enter University/Collage Name"  required="required"/>
+	
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">Year Of Passing *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	
+	<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+	
+	<form:select class="form-control" path="passout"  required="required" oninvalid="this.setCustomValidity('Please Select Passing Year')" oninput="setCustomValidity('')">
+	<form:option value="" label="Select Passing Year"/>
+	<form:option value="2022" label="2022"/>
+	<form:option value="2021" label="2021"/>
+	<form:option value="2020" label="2020"/>
+	<form:option value="2019" label="2019"/>
+	<form:option value="2018" label="2018"/>
+	<form:option value="2017" label="2017"/>
+	<form:option value="2016" label="2016"/>
+	<form:option value="2015" label="2015"/>
+	<form:option value="2014" label="2014"/>
+	<form:option value="2013" label="2013"/>
+	<form:option value="2012" label="2012"/>
+	<form:option value="2011" label="2011"/>
+	<form:option value="2010" label="2010"/>
+    <form:option value="2009" label="2009"/>
+    <form:option value="2008" label="2008"/>
+    <form:option value="2007" label="2007"/>
+    <form:option value="2006" label="2006"/>
+    <form:option value="2005" label="2005"/>
+    <form:option value="2004" label="2004"/>
+    <form:option value="2003" label="2003"/>
+    <form:option value="2002" label="2002"/>
+    <form:option value="2001" label="2001"/>
+    <form:option value="2000" label="2000"/>
+    <form:option value="1999" label="1999"/>
+    <form:option value="1998" label="1998"/>
+    <form:option value="1997" label="1997"/>
+    <form:option value="1996" label="1996"/>
+    <form:option value="1995" label="1995"/>
+    <form:option value="1994" label="1994"/>
+    <form:option value="1993" label="1993"/>
+    <form:option value="1992" label="1992"/>
+    <form:option value="1991" label="1991"/>
+    <form:option value="1990" label="1990"/>
+    <form:option value="1989" label="1989"/>
+    <form:option value="1988" label="1988"/>
+    <form:option value="1987" label="1987"/>
+    <form:option value="1986" label="1986"/>
+    <form:option value="1985" label="1985"/>
+    <form:option value="1984" label="1984"/>
+    <form:option value="1983" label="1983"/>
+    <form:option value="1982" label="1982"/>
+    <form:option value="1981" label="1981"/>
+    <form:option value="1980" label="1980"/>
+    
+    
+	
+	
+	</form:select>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">Percentage *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-percent" aria-hidden="true"></i></span>
+	  <form:input  type="number" min="35" max="100"  step="0.01"
+pattern="^\d+(?:\.\d{1,2})?$"   class="form-control" path="percentage"
+id="location"  placeholder="Enter Your Percentage"
+required="required"/>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	
+	<div class="col-md-3 form-date-w3-agileits">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">Experiance Year *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+	
+	<form:select class="form-control" path="experience"  required="required" >
+	<form:option value="" label="Select Year"/>
+	<form:option value="0" label="Fresher"/>
+	<form:option value="0" label="0 Year"/>
+	<form:option value="1" label="1 Year"/>
+	<form:option value="2" label="2 Year"/>
+	<form:option value="3" label="3 Year"/>
+	<form:option value="4" label="4 Year"/>
+	<form:option value="5" label="5 Year"/>
+	<form:option value="6" label="6 Year"/>
+	<form:option value="7" label="7 Year"/>
+	<form:option value="8" label="8 Year"/>
+	<form:option value="9" label="9 Year"/>
+	<form:option value="10" label="10 Year"/>
+	<form:option value="11" label="11 Year"/>
+	<form:option value="12" label="12 Year"/>
+	<form:option value="13" label="13 Year"/>
+	<form:option value="14" label="14 Year"/>
+	<form:option value="15" label="15 Year"/>
+	<form:option value="16" label="16 Year"/>
+	<form:option value="17" label="17 Year"/>
+	<form:option value="18" label="18 Year"/>
+	<form:option value="19" label="19 Year"/>
+	<form:option value="20" label="20 Year"/>
+	
+	
+	        </form:select>
+	</div>
+		</div>
+			</div>
+				</div>
+	
+	<div class="col-md-3 form-date-w3-agileits">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">Month *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+	
+	
+	<form:select class="form-control" path="month" required="required" >
+	<form:option value="" label="Select Month"/>
+	<form:option value="0" label="Fresher"/>
+	<form:option value="0" label="0 Month"/>
+	<form:option value="1" label="1 Month"/>
+	<form:option value="2" label="2 Months"/>
+	<form:option value="3" label="3 Months"/>
+	<form:option value="4" label="4 Months"/>
+	<form:option value="5" label="5 Months"/>
+	<form:option value="6" label="6 Months"/>
+	<form:option value="7" label="7 Months"/>
+	<form:option value="8" label="8 Months"/>
+	<form:option value="9" label="9 Months"/>
+	<form:option value="10" label="10 Months"/>
+	<form:option value="11" label="11 Months"/>
+	
+	
+	       </form:select>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">Industry * (Select Max 2 )</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	
+	
+
+	<span class="input-group-addon"><i class="fa fa-industry" aria-hidden="true"></i></span>
+
+ 
+ <select id="dates-field2" class=" multiselect-ui " multiple="multiple" name="jobCategory"   oninvalid="this.setCustomValidity('Please Select the Industry ')" oninput="setCustomValidity('')">
+
+<option value="accounting"    label="Accounting , Finance,Banking ,Tax"/>
+<option value="advertising"    label="Advertising ,PR,MR,Event Management"/>
+<option value="agriculture"    label="Agriculture ,Dairy,Forestry,Fishing"/>
+<option value="aviation"    label="Aviation ,Aerospace"/>
+<option value="architecture"    label="Architecture , Interior Design"/>
+<option value="beverages"    label="Beverages ,Liquor,FMCG"/>
+<option value="bpo"    label="BPO ,Call Centre ,KPO,Analytics"/>
+<option value="construction"    label="Construction ,Site & Engineering,Cement ,Metals"/>
+<option value="civil"    label="Civil Construction Design  Engineering"/>
+<option value="consultancy"    label="Consultancy ,placement"/>
+<option value="courier"    label="Courier ,Transportation, Freight , Warehousing"/>
+<option value="education"    label="Education ,Teaching ,Training,Class"/>
+<option value="export"    label="Export -Import,supply chain,Warehouse,Store,Dispatch"/>
+<option value="government"    label="Government , PSI,STC,STI,MPSC,UPSC. "/>
+<option value="hr"    label="HR Recruitment,Executive,Generalist,admin"/>
+<option value="hardware"    label="IT Software - Hardware and Networking  Engineer/System Admistrator"/>
+<option value="software"    label="IT Software - Software Developer"/>
+<option value="testing"    label="IT Software - Testing ,QC"/>
+<option value="design"    label="Manufacture Design  Engineering "/>
+<option value="electronics"    label="Manufacture Electronics ,Electrical"/>
+<option value="food"    label="Manufacture Food Processing,Food & Packaged Food"/>
+<option value="instrumenatation"    label="Manufacture Instrumenatation /Automation"/>
+<option value="mechanical"    label="Manufacture Mechanical ,Automobile"/>
+<option value="production"    label="Manufacture Production ,Quality,maintaince"/>
+<option value="equipment"    label="Manufacture Equipment ,PLC,SCADA, Automation"/>
+<option value="chemical"    label="Manufacture Chemical ,Oil and Gas , Energy , Power ,PetroChemical "/>
+<option value="pharma"    label="Manufacture Pharma ,chemist, Biotech, Microbiology,Pharmaceutical"/>
+<option value="real"    label="Real Estate,Property"/>
+<option value="scientist"    label="R&D ,Scientist"/>
+<option value="sales"    label="Sales ,Marketing,Busness Development"/>
+<option value="service"    label="Service ,Installation,Repair"/>
+<option value="telecom"    label="Telecom ,ISP"/>
+<option value="textiles"    label="Textiles ,Garments,Accessories,fashion"/>
+<option value="travel"    label="Travel ,Hotels,Restaurants,Airlines,Railways"/>
+<option value="training"    label="Training & Development"/>
+<option value="other"    label="Other"/>
+
+       </select>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="username" class="cols-sm-2 control-label">KeySkills *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+	<form:input type="textarea" id='Books' path="keySkill"   placeholder="Java, HTML, .NET, Production, Quality"  required="required" style="width:470px; overflow:auto;"/>
+	
+	</div>
+	</div>
+	</div>
+	</div>
+
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">Job location * </label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+	<form:select id="dates-field2" class="multiselect-ui1 form-control" multiple="multiple" path="topCities" required="required" oninvalid="this.setCustomValidity('Please Select Job Location')" oninput="setCustomValidity('')">
+
+									     <!--   <option value="" label="Select City" style="background-color: #283e4a; color:black;" disabled >Select National City</option> -->
+									                    
+									                     <option value=" Agra" label="Agra ">Agra</option>
+														 <option value="Ahmedabad" label="Ahmedabad ">Ahmedabad</option>
+														 <option value="Allahabad" label="Allahabad ">Allahabad</option>
+														 <option value="Amritsar" label="Amritsar ">Amritsar</option>
+														 <option value="Anand" label="Anand ">Anand</option>
+														 <option value="Aurangabad" label="Aurangabad ">Aurangabad</option>
+														 <option value="Bangalore" label="Bangalore ">Bangalore</option>
+														 <option value="Bhopal" label="Bhopal ">Bhopal</option>
+														  <option value="Bhuvaneshwar" label="Bhuvaneshwar ">Bhuvaneshwar</option>
+														   <option value="Chandigadh" label="Chandigadh ">Chandigadh</option>
+														 <option value="Chennai" label="Chennai ">Chennai</option>
+														 <option value="Coimbatore" label="Coimbatore ">Coimbatore</option>
+														 <option value="Delhi" label="Delhi ">Delhi</option>
+														 <option value="Dhanbad" label="Dhanbad ">Dhanbad</option>
+														 <option value="Faridabad" label="Faridabad ">Faridabad</option>
+														 <option value="Ghaziabad" label="Ghaziabad ">Ghaziabad</option>
+														 <option value="Goa" label="Goa ">Goa</option>
+														 <option value="Gurugram" label="Gurugram ">Gurugram</option>
+														 <option value="Gurgaon" label="Gurgaon ">Gurgaon</option>
+														 <option value="Gwalior" label="Gwalior ">Gwalior</option>
+														 <option value="Hisar" label="Hisar ">Hisar</option>
+														  <option value="HimachalPradesh" label="Himachal Pradesh ">Himachal Pradesh</option>
+														 <option value="Howrah" label="Howrah ">Howrah</option>
+														 <option value="Hyderabad" label="Hyderabad ">Hyderabad</option>
+														 <option value="Indore" label="Indore ">Indore</option>
+														 <option value="Jabalpur" label="Jabalpur ">Jabalpur</option>
+														 <option value="Jaipur" label="Jaipur ">Jaipur</option>
+														 <option value="Jodhpur" label="Jodhpur ">Jodhpur</option>
+														 
+														 <option value="Kanpur" label="Kanpur ">Kanpur</option>
+														 <option value="Kolkata" label="Kolkata ">Kolkata</option>
+														  <option value="Kochi" label="Kochi ">Kochi</option>
+														 <option value="Kota" label="Kota ">Kota</option>
+														 <option value="Lucknow" label="Lucknow ">Lucknow</option>
+														 <option value="Ludhiana" label="Ludhiana ">Ludhiana</option>
+														 <option value="Madurai" label="Madurai ">Madurai</option>
+														 <option value="Maysoore" label="Maysoore ">Maysoore</option>
+														 <option value="Meerut" label="Meerut ">Meerut</option>
+														 <option value="Motihari" label="Motihari "/>Motihari</option>
+														 <option value="Mumbai" label="Mumbai ">Mumbai</option>
+														 <option value="Nagpur" label="Nagpur ">Nagpur</option>
+														  <option value="Noida" label="Noida ">Noida</option>
+														 <option value="Nashik" label="Nashik ">Nashik</option>
+														 <option value="Navi Mumbai" label="Navi Mumbai ">Navi Mumbai</option>
+														 <option value="Patna" label="Patna ">Patna</option>
+														 
+														  <option value="Panji" label="Panji ">Panji</option>
+														  <option value="Panjab" label="Panjab ">Panjab</option>
+														 
+														 <option value="Pune" label="Pune">Pune</option>
+														 <option value="Raipur" label="Raipur ">Raipur</ption>
+														 <option value="Rajkot" label="Rajkot ">Rajkot</option>
+														 <option value="Ranchi" label="Ranchi ">Ranchi</option>
+														 <option value="Srinagar" label="Srinagar ">Srinagar</option>
+														 <option value="Surat" label="Surat ">Surat </option>
+														
+														 <option value="Vadodara" label="Vadodara ">Vadodara</option>
+														 <option value="Vapi" label="Vapi ">Vapi</option>
+														 <option value="Varanasi" label="Varanasi ">Varanasi</option>
+														 <option value="Vasai-Virar" label="Vasai-Virar ">Vasai-Virar</option>
+														 <option value="Vijayawada" label="Vijayawada ">Vijayawada</option>
+														 <option value="Visakhapatnam" label="Visakhapatnam ">Visakhapatnam</option>
+											<!--  <option value="" label="Select Gulf Countries" style="background-color: #283e4a; color:white;" disabled >Select Gulf Countries</option> -->
+											 <option value="Malaysia" label="Malaysia">Malaysia</option>
+											  <option value="Singapore" label="Singapore">Singapore</option>
+											 <option value="Bahrain" label="Bahrain">Bahrain</option>
+														 <option value="Kuwait" label="Kuwait ">Kuwait</option>
+											 <option value="Oman" label="Oman ">Oman</option>
+														 <option value="Qatar" label="Qatar ">Qatar</option>
+											 <option value="Arabia" label="Saudi Arabia ">Saudi Arabia</option>
+											 <option value="Dubai" label="Dubai ">Dubai</option>
+											  <option value="Sharjah" label="Sharjah ">Sharjah</option>
+														 <option value="Emirates" label="United Arab Emirates ">United Arab Emirates</option>
+											
+
+										</form:select>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	  
+	
+	        <div class="col-md-6">
+	<div class="form-group">
+	<label for="name" class="cols-sm-2 control-label">Job Type *</label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-indent" aria-hidden="true"></i></span>
+	<form:select class="form-control" path="jobType"  required="required" oninvalid="this.setCustomValidity('Please Select Job Type ')" oninput="setCustomValidity('')">
+	<form:option value="" label="Select Job Type"/>
+	
+	<form:option value="fulltime" label="Full Time" />
+	<form:option value="parttime" label="Part Time"/>
+	<form:option value="internship" label="Internship" />
+	
+	
+	</form:select>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="username" class="cols-sm-2 control-label">Username *(Enter Username as Email Id) </label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+	<form:input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" path="username" id="username"  placeholder="Enter Your Username" data-error="Bruh, that email address is invalid"  required="required"/>
+	
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	        
+	<div class="col-md-6">
+	<div class="form-group">
+	<label for="inputPassword" class="cols-sm-2 control-label">Password * </label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+	<form:password minlength="5" maxlength="10"    title="at least 5 or more characters"  class="form-control" path="password" id="inputPassword"  placeholder="Enter Your Password (Min 5 and Max 10 character)" name="password" required="required"/>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+    <div class="col-md-6">
+	<div class="form-group">
+	<label for="confirm_password" class="cols-sm-2 control-label">Confirm Password * </label>
+	<div class="cols-sm-10">
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+	<input type="password" minlength="5" maxlength="10" title="at least 5 or more characters"  class="form-control" name="confirm" id="confirm_password"  placeholder="Confirm Your Password (Min 5 and Max 10 character)" name="password2" required="required" />
+	<div class="help-block with-errors"></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	   
+	<div class="col-md-6">
+	<div class="form-group">
+	    <label for="name" class="cols-sm-2 control-label">Upload Resume *</label>
+	<div class="cols-sm-10">
+	 
+	<div class="input-group">
+	<span class="input-group-addon"><i class="fa fa-file-text" aria-hidden="true"></i></span>
+	<input type="file" class="form-control" id="confirm" name = "resume"  required="required"/>
+	</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	
+	
+	
+	<input type="submit" value="Register" id="button" class="btn btn-primary btn-lg btn-block login-button sweet-3"  onclick="myFunction()" style="margin: 20px 280px;"/>
+	
+
+	
+	
+	
+	</form:form>
+	</div>
+	
+	</div>
+	</div>
+	 
+         <hr>
+    
+   
+    
+    <script>
+var form = document.getElementById('loginForm');
+
+function myFunction() {
+  if (form.checkValidity()) {
+	  swal("Registration Successful!", "You clicked the button!", "success")
+  }
+}
+</script>
+    <!-- choose File -->
+
+<script>
+
+var _validFileExtensions = [".txt", ".pdf", ".doc", ".docx", ".odt"];    
+function Validate(oForm) {
+    var arrInputs = oForm.getElementsByTagName("input");
+    for (var i = 0; i < arrInputs.length; i++) {
+        var oInput = arrInputs[i];
+        if (oInput.type == "file") {
+            var sFileName = oInput.value;
+            if (sFileName.length > 0) {
+                var blnValid = false;
+                for (var j = 0; j < _validFileExtensions.length; j++) {
+                    var sCurExtension = _validFileExtensions[j];
+                    if (sFileName.substr(sFileName.length - sCurExtension.length, sCurExtension.length).toLowerCase() == sCurExtension.toLowerCase()) {
+                        blnValid = true;
+                        break;
+                    }
+                }
+                
+                if (!blnValid) {
+                    alert("Sorry, " + sFileName + " is invalid, allowed extensions are: " + _validFileExtensions.join(", "));
+                    return false;
+                }
+            }
+        }
+    }
+  
+    return true;
+}
+</script>
+    
+    
+         
+         
+       	
+<!-- <script>
+
+
+
+swal({
+   title: "Good job!", 
+          text: "You Are Successfully Registered.",
+          type: "success", 
+          allowOutsideClick: false,
+         timer:1000,
+},
+); 
+
+
+$(function() {
+  $("#button").click(function (event) {
+      
+      if ($("#element").val()) {
+       
+      }
+      else {
+        swal({
+          title: "Error!",
+          text: "Please Fill All Required Fields...",
+          type: "warning", 
+          allowOutsideClick: false,
+          timer:5000,
+        });
+      }
+  });
+});
+</script> -->
+	
+	<!-- <script>
+  document.querySelector('.sweet-3').onclick = function(){
+        swal("Good job!", "You Are Successfully Registered!", "success");
+      };
+    </script> -->
+	
+	
+	<!-- conform pswrd validation -->
+		<script>
+var password = document.getElementById("inputPassword")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
+        
+	
+<!-- //datepicker -->
+
+<script>
+$(function(){
+    var dtToday = new Date();
+    
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+    
+    var maxDate = year + '-' + month + '-' + day;
+    
+    $('#txtDate').attr('max', maxDate);
+});
+</script>
+
+
+<!-- //percentage -->
+
+<script>
+ var point=false;
+ var count=0;
+    function check(e,value){
+   
+    //Check Charater
+    debugger;
+    if(count==3)return false;
+        var unicode=e.charCode? e.charCode : e.keyCode;
+        
+        if( unicode == 46 && point==true)
+               return false;
+        if( unicode == 46 && point==false)
+        {
+        		point=true;
+        }
+        if (unicode!=8)if((unicode<48||unicode>57)&&unicode!=46)return false;
+        if(point==true)count++;
+    }
+    function checkLength(){
+    var fieldVal = document.getElementById('txtF').value;
+    //Suppose u want 3 number of character
+    if(fieldVal <= 100){
+        return true;
+    }
+    else
+    {
+        var str = document.getElementById('txtF').value;
+        str = str.substring(0, str.length - 1);
+    document.getElementById('txtF').value = str;
+    }
+    }
+</script>
+
+
+	
+	
+	
+<!-- //validation -->
+<script>
+var alpha = "[ A-Za-z]";
+var numeric = "[0-9]"; 
+var alphanumeric = "[ A-Za-z0-9]"; 
+
+function onKeyValidate(e,charVal){
+    var keynum;
+    var keyChars = /[\x00\x08]/;
+    var validChars = new RegExp(charVal);
+    if(window.event)
+    {
+        keynum = e.keyCode;
+    }
+    else if(e.which)
+    {
+        keynum = e.which;
+    }
+    var keychar = String.fromCharCode(keynum);
+    if (!validChars.test(keychar) && !keyChars.test(keychar))   {
+        return false
+    } else{
+        return keychar;
+    }
+}
+</script>
+
+
+
+
+
+
+
+<!-- //scrolling script -->
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/wow.js"></script>
+        <script src="js/main.js"></script>
+	
+	
+	
+	
+<script>
+//contact validation
+function validatephone(xxxxx) 
+{
+  var maintainplus = '';
+  var numval = xxxxx.value
+  if ( numval.charAt(0)=='+' )
+  {
+    var maintainplus = '';
+  }
+  curphonevar = numval.replace(/[\\A-Za-z!"ÃÂ£$%^&\-\)\(*+_={};:'@#~,.ÃÂ \/<>\" "\?|`ÃÂ¬\]\[]/g,'');
+  xxxxx.value = maintainplus + curphonevar;
+  var maintainplus = '';
+  xxxxx.focus;
+}
+</script>
+
+
+<!--Qualification/job category-->
+
+<script type="text/javascript">
+     function configureDropDownLists(al1,al2) {
+	 
+	<!--Qualification-->
+	 
+    var Below  = ['Select','Arts','Commerce ','Science ','Other'];
+    var BArch = ['Select','Architecture'];
+    var BBABMS = ['Select','Marketing','Finance / Accounting','Management','Other'];
+    var BEd = ['Select','Education','Other'];
+	var BPharma  = ['Select','Pharmacy','Other'];
+    var BSc = ['Select','Chemistry ','Biology ','Physics  ','Electronics/Telecommunication  ','Microbiology  ','Zoology ',
+	'Agriculture  ','Anthropology',' Biochemistry  ','Biomedical ','Botany  ','Computers ','Food Technology ','Geology ',
+	'Home Science ','Maths','Statistics ','Other'];
+    var BEBTech = ['Select','Computers ','IT-Software  ','Mechanical  ','Electronics/Telecommunication  ','Electrical','Civil ',
+	'Aeronautics  ','Agriculture',' Architecture ','Automobile  ','Biochemistry ','Biomedical ','Biotechnology',
+	' Chemical  ','Energy  ','Environmental  ','Instrumentation  ','Marine ','Metallurgy ',' Mineral',' Mining  ',
+	'Nuclear  ','Production/Industrial  ','Textile','Other Engineering'];
+    var BA = ['Select','Arts and Humanities ','English ','Hindi ','Maths ',' Economics ','History','Political','Science ',
+	'Communication ',' Fine Arts ','Geography ','Graphics / Web designing ',' Journalism / Mass',' Communication  ',
+	'Philosophy ','PR/Advertising ',' Psychology ','Sanskrit ',' Sociology  ','Visual Arts','Other'];
+	var BCA  = ['Select',' Computers','Other'];
+    var Bcom = ['Select','Commerce','Other'];
+    var BDS = ['Select','Dentistry','Other'];
+    var BHM = ['Select','Hotel Management','Other'];
+	var BVSC  = ['Select','Veterinary Science','Other'];
+    var CA = ['Select','Chartered Accountant','Other'];
+    var CFA = ['Select','Chartered Financial Analyst','Other'];
+    var CS = ['Select','Company Secretary','Other'];
+	var CWACMA = ['Select','Cost Accountant','Other'];
+	var Diploma = ['Select','Arts and Humanities ','Vocational Course  ','Anaesthesiology ','Cardiology  ','Chemical  ','Civil ',
+	'Commerce ','Computers ','Dentistry ','Dermatology,Venereology & Leprosy ','Electrical  ',
+	'Electronics/Telecommunication  ','Fashion Designing',' Finance / Accounting General  ','Surgery  ',
+	'Graphics / Web designing  ','Hotel Management ','Insurance  ','Management',' Marketing ',' Maths ','Mechanical',
+	'Neurology',' Nursing ','Nutrition & Dietetics  ','Obstetrics & Gynaecology ',' Ophthalmology ',' Orthopaedics ',
+	'Pediatrics  ','Pathology',' Pharmacy ','Physiotherapy ','Psychiatry ','Radiology ',' Science  ','Tourism  ',
+	'Visual Arts  ','Other Engineering ','Other Medicine',' Other'];
+	var IntegratedPG = ['Select',' Management ','Journalism / Mass Communication ','PR/Advertising ','Tourism Other'];
+	var LLM = ['Select','Law','Other'];
+	var LLB = ['Select','Law','Other'];
+	var MA = ['Select','Arts and Humanities','English ','Hindi ','Maths ','Economics  ','History ','Political ','Science ',
+	'Communication ','Fine Arts ','Geography ','Graphics / Web designing ','Journalism / Mass Communication',
+	'Philosophy ','PR/Advertising ','Psychology ','Sanskrit','Sociology ','Visual Arts','Other'];
+	var MCA = ['Select','Computers','Other'];
+	var Mcom = ['Select','Commerce','Other'];
+	var MEd = ['Select','Education','Other'];
+	var MPharm = ['Select','Pharmacy','Other'];
+	var Msc = ['Select','Chemistry','Biology ','Physics ',' Electronics/Telecommunication ',' Microbiology',' Zoology',
+	'Agriculture ','Anthropology ',' Biochemistry ',' Biomedical',' Botany',' Computers',' Food Technology ',
+	' Geology  ','Home Science ',' Maths ',' Statistics ',' Other'];
+	var Mtech = ['Select','Computers ',' IT-Software',' Mechanical ',' Electronics/Telecommunication ',' Electrical  ','Civil ',
+	' Aeronautics',' Agriculture',' Architecture',' Automobile ',' Aviation',' Biochemistry ','Biomedical',
+	' Biotechnology',' Chemical',' Energy','Environmental',' Instrumentation',' Marine',' Metallurgy ','Mineral ',
+	'Mining',' Nuclear ','Production/Industrial ','Textile',' Other Engineering'];
+	var MBAPGDM = ['Select','Marketing','Finance / Accounting ','HR/ Industrial Relations ','Operations ',
+	'Advertising/Mass Communication ','Information Technology','International Business','Other Management'];
+	var MBSS = ['Select','Medicine and Health Sciences','Other'];
+	var MDS = ['Select','Dentistry','Other'];
+	var MDMS = ['Select','General Medicine ','Pathology ','Radiology ','General Surgery ','Obstetrics & Gynaecology ',
+	'Cardiology ','Anaesthesiology ','Anatomy',' Biochemistry ','Dermatology,Venereology & Leprosy ','ENT',
+	' Forensic Medicine',' Hospital Administration ','Lab Medicine',' Microbiology',' Neurology',' Ophthalmology ',
+	'Orthopaedics ','Pediatrics ','Pharmacy',' Physiology',' Psychiatry',' Other'];
+	var MMH = ['Select','Hotel Management','Other'];
+	var MPhill = ['Select','Philosophy','Other'];
+	var MVSC = ['Select','Veterinary Science','Other'];
+	var other = ['Select','Other'];
+	var PGDiploma = ['Select',' Arts and Humanities ','Vocational Course ','Anaesthesiology ','Cardiology ','Chemical','Civil ',
+	'Commerce',' Computers ','Dermatology,Venereology & Leprosy','Electrical ','Electronics/Telecommunication',
+	'Fashion Designing ','Finance / Accounting ','General Surgery ','Graphics / Web designing','Hotel Management ',
+	'Insurance ','Management ','Marketing ','Maths','Mechanical ','Neurology ','Nursing',' Nutrition & Dietetics ',
+	'Obstetrics & Gynaecology','Ophthalmology',' Orthopaedics ','Pediatrics ','Pathology ','Physiotherapy ',
+	'Psychiatry ','Radiology ','Science',' Tourism','Visual Arts','Other Medicine','Other'];
+	var PHDoctorate = ['Select','Advertising/Mass Communication ','Agriculture ','Architecture',' Arts and Humanities',
+	' Automobile ','Aviation ','Biochemistry ','Biotechnology ','Biology',' Biomedical',' Ceramics',' Chemical ',
+	'Chemistry ','Civil ','Commerce',' Communication',' Computers ','Dermatology,Venereology & Leprosy ','Economics ',
+	'Electrical ','Energy Environmental ','Fashion Designing ','Finance / Accounting ','Fine Arts','Food Technology ',
+	'History','Hotel Management ','HR/ Industrial Relation ','Instrumentation ','International Business ',
+	'Journalism / Mass Communication ','Law ','Literature ','Marketing ','Maths ','Mechanical',' Medicine and Health ',
+	'Sciences ','Microbiology ','Nuclear ','Pharmacy ','Philosophy ','Physics',' Production/Industrial Science',
+	' Sociology ','Statistics ','Visual Arts ','Other Arts ','Other Engineering','Other Management ','Other'];
+	
+	
+	
+
+	
+	var AF = ['Select','Accounting Jobs','Accounting Software Jobs','Accounts Jobs','Asset Management Jobs','Auditing Jobs',
+	'Balance Sheet Jobs','Business Analytics Jobs','Business Awareness Jobs','CA JobsCash Flow Management Jobs',
+	'CFA Jobs','Corporate Tax Jobs','Cost Analysis Jobs','Cost Center Report Analysis Job','Data Analysis Jobs',
+	'Debt Management Jobs','Finance Jobs','Financial Advising Jobs','Financial Analysis Jobs',
+	'Financial Concepts Jobs','Financial Data Jobs','Financial Management Jobs','Financial Modeling Jobs',
+	'Financial Planning Jobs','Financial Reporting Jobs','Financial Statement Analysis Jobs',
+	'Financial Statements Jobs','Financial Systems Jobs','Forecasting Jobs','GAAP Jobs','IFRS Jobs',
+	'Income Tax Jobs','Interest Calculations Jobs','Invoices Jobs','Journal Entry Jobs','liaisoning Jobs',
+	'MS Excel Jobs',' Payroll Jobs','Performance Management Jobs',
+	'Processing and ReconcilingQuantitative Analysis Jobs','Relationship Management Jobs','SOX Compliance Jobs',
+	'Tax Analysis Jobs'];
+	
+	var AAS = ['Select','Brake Repair Jobs ','Car Engine Servicing Jobs','Diesel Engine Repair Jobs ','Engine Repair Jobs ',
+	'Jobs in Auto Service Center','Mechanical Jobs ','Petrol Engine Repair Jobs','Car Driver Jobs','Truck Driver Jobs',
+	'Vehicle Repair Jobs','Bus Driver Jobs','Vehicle Operating Jobs'];
+	
+    var BAS = ['Select','Administration Jobs','Advertising Jobs','Business Administration Jobs','Business Analysis Jobs',
+	'Business Informatics Jobs','Clerical Jobs','Client Relations Jobs','Contract Management Jobs','Data Analyst Jobs ',
+	'Environmental Management Job ','Event Coordination Jobs ','Event Management Jobs','Hospital Administration Jobs',
+	'Hotel Management Jobs','Human Resource Management Jobs','Information Management Jobs','Key Accounts Management Jobs',
+	'Knowledge Management Jobs','Legal Familiarity Jobs ','Maintaining Office Records Jobs','Management Jobs',
+	' Management Trainee Jobs','Marketing Operations JobS ','Office Administration Jobs ','Office Management Jobs',
+	'Oral Communication Jobs ','Order Processing Jobs ','Project Management Jobs','Public Management Jobs',
+	'Retail Marketing Jobs','Sales Jobs','Securities Jobs','Supply Chain Management Jobs','Wealth Management Jobs'];
+	
+	var ES = ['Select','Aeronautical Engineering Jobs','Aerospace Engineering Jobs','Architectural Engineering Jobs',
+	'Civil Engineering Jobs','Computer Engineering Jobs','Electrical Engineering Jobs','Electronics Engineering Jobs',
+	'Engineering Physics Jobs','Financial Engineering Jobs','Industrial Engineering Jobs','IT Engineering Jobs',
+	'Materials Engineering Jobs','Mechanical Engineering Jobs','Medical Engineering Jobs','Metallurgical Engineering Jobs',
+	'Petroleum Engineering Jobs','Polymer Fiber Engineering Jobs','Software Engineering Jobs','Textile Engineering Jobs',
+	'Wireless Engineering Jobs','Core Java Jobs'];
+	
+	var HRS  = ['Select','Candidate Search Jobs',' Candidate Sourcing Jobs','Employee Development Jobs ',
+	'Labor Relations Specialist Jobs ','Placement Management Jobs','Talent Acquisition Manager Jobs',
+	'Talent Management Systems Jobs ','Talent Planning Jobs HR VP Jobs'];
+	
+	var JIS  = ['Select','.Net Jobs','Adobe Flash Player Jobs ','AJAX Jobs','Android Jobs ','Apache Tomcat Jobs',
+	'Apache Web Server Jobs','ASP.NET Jobs','Assembly Language Jobs','Auto CAD Jobs','Automation Testing Jobs','C Jobs',
+	'C# Jobs','C++ Jobs','CAD CAM Jobs','CAE Jobs','Data Structures Jobs','Dhtml Jobs','DOS Jobs ','ERP Jobs',
+	' Ethernet Jobs','Firewall Jobs','Flash Jobs ','Fortran Jobs ','HTML Jobs ','iPhone Jobs  ','IT Support Jobs ',
+	'J++ Jobs ','J2Ee Jobs ','J2Me Jobs','J2Se Jobs ','Java Jobs ','Java Trainee Jobs ','Java2D Jobs ','Javascript Jobs ',
+	'Linux Jobs ','Mac Jobs','Manual Testing Jobs',' Mobile Application Jobs ','Multimedia Jobs  ','MySQL Jobs ',
+	'Online Jobs',' Oracle Jobs  ','OS Programming Jobs ','Pascal Jobs ','PHP Jobs  ','Python Jobs',' SAP Jobs  ',
+	'Selenium Jobs ',' SharePoint Jobs ','Shell Scripting Jobs ','Silverlight Jobs ','Simulation Programming Jobs ',
+	'Software Testing Jobs ','SQL Job ','sSql Server Jobs ','Sybase Jobs ','Symbian C++ Jobs ','Symbian Jobs ',
+	'Syncml Jobs ','Talent Acquisition Jobs ','Automation TIBCO Jobs ','Unix Jobs ','VB.NET Jobs','VBScript Jobs',
+	'Visual Basic Jobs',' Visual C++ Jobs','Visual Foxpro JobS ','Web Designing Jobs','Web Developer Jobs',
+	' Web Server Jobs'];
+	
+	var LSS  = ['Select','American Studies Jobs','Applied Arts Jobs','Applied Finance Jobs','Applied Mathematics Jobs',
+	'Applied Science Jobs','Art Jobs','Asian Studies Jobs','Biochemistry Jobs','Bioinformatics Jobs',
+	'Biomedical Science Jobs','Combined Studies Jobs','Economic Science Jobs','English Grammar jobs',
+	'Environmental Science Jobs','Fine Arts Jobs','General Studies Jobs','Geology Jobs','Hispanic Studies Jobs',
+	'Integrated Studies Jobs','International Studies Jobs','Liberal Studies Jobs','Professional Studies Jobs',
+	'Social Science Jobs','Social Studies Jobs','Studies Jobs','Theological Studies Jobs','Yoga Jobs'];
+	
+	var MS  = ['Select','Ad Agency Jobs ','Brand Management Jobs  ','Brand Marketing Jobs ','Business Design Jobs ',
+	'Business Development Jobs ','Client Support Jobs ','Communication Jobs ','Content Writing Jobs ',
+	'Customer Care Jobs ','Customer Relations Jobs ','Customer Service Jobs ','Digital Marketing Jobs ',
+	'Direct Marketing Jobs  ','Fundraising Jobs ','Inside Sales Jobs  ','International Marketing Jobs ',
+	'Market Research Jobs ','Marketing Strategy Jobs ',' Marketing Jobs  ','Merchandising Jobs  ',
+	'Mobile Marketing Jobs ','National Marketing Jobs  ','Online Marketing Jobs  ','Outside Sales Jobs ',
+	'Price Quoting Jobs  ','Product Demonstration Jobs ','Product Promotion Jobs  ','Product Research Jobs',
+	'Project Coordination Jobs  ','Promotion Jobs  ','Public Relations Jobs',' Sales Presentations Jobs  ',
+	'Sales Support Jobs ','Sales Tracking Jobs','SEO Jobs','Social Media Marketing Jobs','Social Research Jobs ',
+	'Technical Support Jobs','Test Marketing Jobs','Vendor Management Jobs'];
+	
+	var MES  = ['Select','3D Max Jobs','Acting Jobs','Adobe Illustrator Jobs','Adobe Pagemaker Jobs','Adobe Photoshop Jobs',
+	'Documentation Jobs','Drama Jobs','Dramatic art Jobs','News Reporting Jobs','Film Editing Jobs',
+	'Graphic Design Jobs','Video Editing Jobs','Video production Jobs'];
+	
+	var MHS  = ['Select','Biosystems Jobs','BPT Jobs','Clinical Research Jobs','Dental Medicine Jobs','Dental Science Jobs',
+	'Dental Surgery Jobs','Dentist Jobs','Diet Jobs','Health Administration Jobs','Health Informatics Jobs',
+	'Health Science Jobs','Homeopathy Jobs ','GYM Jobs ',' MedicineMicrobiology Jobs',' PharmacyMLT Jobs',
+	'Nursing Jobs ','OPD Jobs',' Para Medical Jobs',' Physiotherapist Jobs ','Psychology jobs','Surgeon Jobs',
+	'Therapists jobs',' Veterinary Jobs',' Veterinary Surgeon Jobs',' X-Ray Jobs'];
+	
+	var NS  = ['Select','CDMA Jobs','GSM Jobs','VLSI Jobs','VMS Jobs','VOIP Jobs','VPN Jobs','VSAT Jobs','VSS Clearcase Jobs',
+	'VxWorks Jobs','WAN Jobs','WAP Jobs','WCF Jobs','CCNA Jobs','Computer Networking Jobs','Computer Hardware Jobs',
+	'Desktop Support Technician Jobs','Fibre Optics Jobs','Embeded Technology Jobs','A Level Jobs','O Level Jobs',
+	'CSC ECE Jobs','Web/HTTP Jobs','Network Security Jobs'];
+	
+	var OS  = ['Select','Abap Jobs','B2B Jobs','Back-Office Operations Jobs','Blackberry Jobs','Building Construction Jobs',
+	'Coaching Jobs','Commerce Jobs','Computer Operator Jobs',' Engineering Construction Jobs',' Content Writer Jobs',
+	' Cooking Jobs',' ounseling Jobs',' Criminal Justice Jobs',' CRM Jobs',' CSS Jobs',' Dance Jobs',' Data Entry Jobs',
+	' Data Warehousing Jobs',' Db2 JobsDbase Jobs',' DCA Jobs',' Dcom Jobs',' Dhcp Jobs','DNS Jobs','Email Marketing Jobs',
+	' Embedded C Jobs ','Google Adwords Jobs',' Google Analytics Jobs',' Hadoop Jobs ',' Journalism Jobs',
+	' Nuclear Engineer Jobs',' Nutrition Jobs',' Photography Jobs','SAP Hr Jobs','SAP Retail Jobs','SAP Security Jobs ',
+	'SAP Sem Jobs',' SAP Srm Jobs','Social Welfare Jobs ','Tally Jobs','Textile Designing Jobs'];
+	
+	
+    switch (al1.value) {
+	
+	
+	
+        case 'Below':
+            al2.options.length = 0;
+            for (i = 0; i < Below.length; i++) {
+                createOption(al2, Below[i], Below[i]);
+            }
+            break;
+	case 'BArch':
+            al2.options.length = 0;
+            for (i = 0; i < BArch.length; i++) {
+                createOption(al2, BArch[i], BArch[i]);
+            }
+            break;
+	case 'BBABMS':
+            al2.options.length = 0;
+            for (i = 0; i < BBABMS.length; i++) {
+                createOption(al2, BBABMS[i], BBABMS[i]);
+            }
+            break;
+	case 'BEd':
+            al2.options.length = 0;
+            for (i = 0; i < BEd.length; i++) {
+                createOption(al2, BEd[i], BEd[i]);
+            }
+            break;
+	case 'BPharma':
+            al2.options.length = 0;
+            for (i = 0; i < BPharma.length; i++) {
+                createOption(al2, BPharma[i], BPharma[i]);
+            }
+            break;
+	case 'BSc':
+            al2.options.length = 0;
+            for (i = 0; i < BSc.length; i++) {
+                createOption(al2, BSc[i], BSc[i]);
+            }
+            break;
+	case 'BEBTech':
+            al2.options.length = 0;
+            for (i = 0; i < BEBTech.length; i++) {
+                createOption(al2, BEBTech[i], BEBTech[i]);
+            }
+            break;
+	case 'BA':
+            al2.options.length = 0;
+            for (i = 0; i < BA.length; i++) {
+                createOption(al2, BA[i], BA[i]);
+            }
+            break;
+	case 'BCA':
+            al2.options.length = 0;
+            for (i = 0; i < BCA.length; i++) {
+                createOption(al2, BCA[i], BCA[i]);
+            }
+            break;
+	case 'Bcom':
+            al2.options.length = 0;
+            for (i = 0; i < Bcom.length; i++) {
+                createOption(al2, Bcom[i], Bcom[i]);
+            }
+            break;
+	case 'BDS':
+            al2.options.length = 0;
+            for (i = 0; i < BDS.length; i++) {
+                createOption(al2, BDS[i], BDS[i]);
+            }
+            break;
+	case 'BHM':
+            al2.options.length = 0;
+            for (i = 0; i < BHM.length; i++) {
+                createOption(al2, BHM[i], BHM[i]);
+            }
+            break;
+	case 'BVSC':
+            al2.options.length = 0;
+            for (i = 0; i < BVSC.length; i++) {
+                createOption(al2, BVSC[i], BVSC[i]);
+            }
+            break;
+	case 'CA':
+            al2.options.length = 0;
+            for (i = 0; i < CA.length; i++) {
+                createOption(al2, CA[i], CA[i]);
+            }
+            break;
+	case 'CFA':
+            al2.options.length = 0;
+            for (i = 0; i < CFA.length; i++) {
+                createOption(al2, CFA[i], CFA[i]);
+            }
+            break;
+	case 'CS':
+            al2.options.length = 0;
+            for (i = 0; i < CS.length; i++) {
+                createOption(al2, CS[i], CS[i]);
+            }
+            break;
+	case 'CWACMA':
+            al2.options.length = 0;
+            for (i = 0; i < CWACMA.length; i++) {
+                createOption(al2, CWACMA[i], CWACMA[i]);
+            }
+            break;
+	case 'Diploma':
+            al2.options.length = 0;
+            for (i = 0; i < Diploma.length; i++) {
+                createOption(al2, Diploma[i], Diploma[i]);
+            }
+            break;
+	case 'IntegratedPG':
+            al2.options.length = 0;
+            for (i = 0; i < IntegratedPG.length; i++) {
+                createOption(al2, IntegratedPG[i], IntegratedPG[i]);
+            }
+            break;
+	case 'LLM':
+            al2.options.length = 0;
+            for (i = 0; i < LLM.length; i++) {
+                createOption(al2, LLM[i], LLM[i]);
+            }
+            break;
+	case 'LLB':
+            al2.options.length = 0;
+            for (i = 0; i < LLB.length; i++) {
+                createOption(al2, LLB[i], LLB[i]);
+            }
+            break;
+	case 'MA':
+            al2.options.length = 0;
+            for (i = 0; i < MA.length; i++) {
+                createOption(al2, MA[i], MA[i]);
+            }
+            break;
+	case 'MCA':
+            al2.options.length = 0;
+            for (i = 0; i < MCA.length; i++) {
+                createOption(al2, MCA[i], MCA[i]);
+            }
+            break;
+	case 'Mcom':
+            al2.options.length = 0;
+            for (i = 0; i < Mcom.length; i++) {
+                createOption(al2, Mcom[i], Mcom[i]);
+            }
+            break;
+	
+	case 'MEd':
+            al2.options.length = 0;
+            for (i = 0; i < MEd.length; i++) {
+                createOption(al2, MEd[i], MEd[i]);
+            }
+            break;
+	case 'MPharm':
+            al2.options.length = 0;
+            for (i = 0; i < MPharm.length; i++) {
+                createOption(al2, MPharm[i], MPharm[i]);
+            }
+            break;
+	case 'Msc':
+            al2.options.length = 0;
+            for (i = 0; i < Msc.length; i++) {
+                createOption(al2, Msc[i], Msc[i]);
+            }
+            break;
+	case 'Mtech':
+            al2.options.length = 0;
+            for (i = 0; i < Mtech.length; i++) {
+                createOption(al2, Mtech[i], Mtech[i]);
+            }
+            break;
+	case 'MBAPGDM':
+            al2.options.length = 0;
+            for (i = 0; i < MBAPGDM.length; i++) {
+                createOption(al2, MBAPGDM[i], MBAPGDM[i]);
+            }
+            break;
+	case 'MBSS':
+            al2.options.length = 0;
+            for (i = 0; i < MBSS.length; i++) {
+                createOption(al2, MBSS[i], MBSS[i]);
+            }
+            break;
+	case 'MDS':
+            al2.options.length = 0;
+            for (i = 0; i < MDS.length; i++) {
+                createOption(al2, MDS[i], MDS[i]);
+            }
+            break;
+	case 'MDMS':
+            al2.options.length = 0;
+            for (i = 0; i < MDMS.length; i++) {
+                createOption(al2, MDMS[i], MDMS[i]);
+            }
+            break;
+	case 'MMH':
+            al2.options.length = 0;
+            for (i = 0; i < MMH.length; i++) {
+                createOption(al2, MMH[i], MMH[i]);
+            }
+            break;
+	case 'MPhill':
+            al2.options.length = 0;
+            for (i = 0; i < MPhill.length; i++) {
+                createOption(al2, MPhill[i], MPhill[i]);
+            }
+            break;
+	case 'MVSC':
+            al2.options.length = 0;
+            for (i = 0; i < MVSC.length; i++) {
+                createOption(al2, MVSC[i], MVSC[i]);
+            }
+            break;
+	case 'other':
+            al2.options.length = 0;
+            for (i = 0; i < other.length; i++) {
+                createOption(al2, other[i], other[i]);
+            }
+            break;
+	case 'PGDiploma':
+            al2.options.length = 0;
+            for (i = 0; i < PGDiploma.length; i++) {
+                createOption(al2, PGDiploma[i], PGDiploma[i]);
+            }
+            break;
+	case 'PHDoctorate':
+            al2.options.length = 0;
+            for (i = 0; i < PHDoctorate.length; i++) {
+                createOption(al2, PHDoctorate[i], PHDoctorate[i]);
+            }
+            break;
+	
+	
+	
+	
+	
+	case 'AF':
+            al2.options.length = 0;
+            for (i = 0; i < AF.length; i++) {
+                createOption(al2, AF[i], AF[i]);
+            }
+            break;
+	case 'AAS':
+            al2.options.length = 0;
+            for (i = 0; i < AAS.length; i++) {
+                createOption(al2, AAS[i], AAS[i]);
+            }
+            break;
+	case 'BAS':
+            al2.options.length = 0;
+            for (i = 0; i < BAS.length; i++) {
+                createOption(al2, BAS[i], BAS[i]);
+            }
+            break;
+	case 'ES':
+            al2.options.length = 0;
+            for (i = 0; i < ES.length; i++) {
+                createOption(al2, ES[i], ES[i]);
+            }
+            break;
+	case 'HRS':
+            al2.options.length = 0;
+            for (i = 0; i < HRS.length; i++) {
+                createOption(al2, HRS[i], HRS[i]);
+            }
+            break;
+	case 'JIS':
+            al2.options.length = 0;
+            for (i = 0; i < JIS.length; i++) {
+                createOption(al2, JIS[i], JIS[i]);
+            }
+            break;
+	case 'LSS':
+            al2.options.length = 0;
+            for (i = 0; i < LSS.length; i++) {
+                createOption(al2, LSS[i], LSS[i]);
+            }
+            break;
+	case 'MS':
+            al2.options.length = 0;
+            for (i = 0; i < MS.length; i++) {
+                createOption(al2, MS[i], MS[i]);
+            }
+            break;
+	
+	case 'MES':
+            al2.options.length = 0;
+            for (i = 0; i < MES.length; i++) {
+                createOption(al2, MES[i], MES[i]);
+            }
+            break;
+	case 'MHS':
+            al2.options.length = 0;
+            for (i = 0; i < MHS.length; i++) {
+                createOption(al2, MHS[i], MHS[i]);
+            }
+            break;
+	case 'NS':
+            al2.options.length = 0;
+            for (i = 0; i < NS.length; i++) {
+                createOption(al2, NS[i], NS[i]);
+            }
+            break;
+	case 'OS':
+            al2.options.length = 0;
+            for (i = 0; i < OS.length; i++) {
+                createOption(al2, OS[i], OS[i]);
+            }
+            break;
+	
+            default:
+                al2.options.length = 0;
+            break;
+    }
+
+}
+
+    function createOption(aal, text, value) {
+        var opt = document.createElement('option');
+        opt.value = value;
+        opt.text = text;
+        aal.options.add(opt);
+    }
+</script>
+
+<!--multiselect industry-->
+<script>
+
+!function ($) {
+    "use strict";// jshint ;_;
+
+    if (typeof ko !== 'undefined' && ko.bindingHandlers && !ko.bindingHandlers.multiselect) {
+        ko.bindingHandlers.multiselect = {
+            after: ['options', 'value', 'selectedOptions', 'enable', 'disable'],
+
+            init: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+                var $element = $(element);
+                var config = ko.toJS(valueAccessor());
+
+                $element.multiselect(config);
+
+                if (allBindings.has('options')) {
+                    var options = allBindings.get('options');
+                    if (ko.isObservable(options)) {
+                        ko.computed({
+                            read: function() {
+                                options();
+                                setTimeout(function() {
+                                    var ms = $element.data('multiselect');
+                                    if (ms)
+                                        ms.updateOriginalOptions();//Not sure how beneficial this is.
+                                    $element.multiselect('rebuild');
+                                }, 1);
+                            },
+                            disposeWhenNodeIsRemoved: element
+                        });
+                    }
+                }
+
+                //value and selectedOptions are two-way, so these will be triggered even by our own actions.
+                //It needs some way to tell if they are triggered because of us or because of outside change.
+                //It doesn't loop but it's a waste of processing.
+                if (allBindings.has('value')) {
+                    var value = allBindings.get('value');
+                    if (ko.isObservable(value)) {
+                        ko.computed({
+                            read: function() {
+                                value();
+                                setTimeout(function() {
+                                    $element.multiselect('refresh');
+                                }, 1);
+                            },
+                            disposeWhenNodeIsRemoved: element
+                        }).extend({ rateLimit: 100, notifyWhenChangesStop: true });
+                    }
+                }
+
+                //Switched from arrayChange subscription to general subscription using 'refresh'.
+                //Not sure performance is any better using 'select' and 'deselect'.
+                if (allBindings.has('selectedOptions')) {
+                    var selectedOptions = allBindings.get('selectedOptions');
+                    if (ko.isObservable(selectedOptions)) {
+                        ko.computed({
+                            read: function() {
+                                selectedOptions();
+                                setTimeout(function() {
+                                    $element.multiselect('refresh');
+                                }, 1);
+                            },
+                            disposeWhenNodeIsRemoved: element
+                        }).extend({ rateLimit: 100, notifyWhenChangesStop: true });
+                    }
+                }
+
+                var setEnabled = function (enable) {
+                    setTimeout(function () {
+                        if (enable)
+                            $element.multiselect('enable');
+                        else
+                            $element.multiselect('disable');
+                    });
+                };
+
+                if (allBindings.has('enable')) {
+                    var enable = allBindings.get('enable');
+                    if (ko.isObservable(enable)) {
+                        ko.computed({
+                            read: function () {
+                                setEnabled(enable());
+                            },
+                            disposeWhenNodeIsRemoved: element
+                        }).extend({ rateLimit: 100, notifyWhenChangesStop: true });
+                    } else {
+                        setEnabled(enable);
+                    }
+                }
+
+                if (allBindings.has('disable')) {
+                    var disable = allBindings.get('disable');
+                    if (ko.isObservable(disable)) {
+                        ko.computed({
+                            read: function () {
+                                setEnabled(!disable());
+                            },
+                            disposeWhenNodeIsRemoved: element
+                        }).extend({ rateLimit: 100, notifyWhenChangesStop: true });
+                    } else {
+                        setEnabled(!disable);
+                    }
+                }
+
+                ko.utils.domNodeDisposal.addDisposeCallback(element, function() {
+                    $element.multiselect('destroy');
+                });
+            },
+
+            update: function(element, valueAccessor, allBindings, viewModel, bindingContext) {
+                var $element = $(element);
+                var config = ko.toJS(valueAccessor());
+
+                $element.multiselect('setOptions', config);
+                $element.multiselect('rebuild');
+            }
+        };
+    }
+
+    function forEach(array, callback) {
+        for (var index = 0; index < array.length; ++index) {
+            callback(array[index], index);
+        }
+    }
+
+    /**
+     * Constructor to create a new multiselect using the given select.
+     *
+     * @param {jQuery} select
+     * @param {Object} options
+     * @returns {Multiselect}
+     */
+    function Multiselect(select, options) {
+
+        this.$select = $(select);
+        this.options = this.mergeOptions($.extend({}, options, this.$select.data()));
+
+        // Placeholder via data attributes
+        if (this.$select.attr("data-placeholder")) {
+            this.options.nonSelectedText = this.$select.data("Select Industry");
+        }
+
+        // Initialization.
+        // We have to clone to create a new reference.
+        this.originalOptions = this.$select.clone()[0].options;
+        this.query = '';
+        this.searchTimeout = null;
+        this.lastToggledInput = null;
+
+        this.options.multiple = this.$select.attr('multiple') === "multiple";
+        this.options.onChange = $.proxy(this.options.onChange, this);
+        this.options.onSelectAll = $.proxy(this.options.onSelectAll, this);
+        this.options.onDeselectAll = $.proxy(this.options.onDeselectAll, this);
+        this.options.onDropdownShow = $.proxy(this.options.onDropdownShow, this);
+        this.options.onDropdownHide = $.proxy(this.options.onDropdownHide, this);
+        this.options.onDropdownShown = $.proxy(this.options.onDropdownShown, this);
+        this.options.onDropdownHidden = $.proxy(this.options.onDropdownHidden, this);
+        this.options.onInitialized = $.proxy(this.options.onInitialized, this);
+        this.options.onFiltering = $.proxy(this.options.onFiltering, this);
+
+        // Build select all if enabled.
+        this.buildContainer();
+        this.buildButton();
+        this.buildDropdown();
+        this.buildSelectAll();
+        this.buildDropdownOptions();
+        this.buildFilter();
+
+        this.updateButtonText();
+        this.updateSelectAll(true);
+
+        if (this.options.enableClickableOptGroups && this.options.multiple) {
+            this.updateOptGroups();
+        }
+
+        this.options.wasDisabled = this.$select.prop('disabled');
+        if (this.options.disableIfEmpty && $('option', this.$select).length <= 0) {
+            this.disable();
+        }
+
+        this.$select.wrap('<span class="multiselect-native-select" />').after(this.$container);
+        this.options.onInitialized(this.$select, this.$container);
+    }
+
+    Multiselect.prototype = {
+
+        defaults: {
+            /**
+             * Default text function will either print 'None selected' in case no
+             * option is selected or a list of the selected options up to a length
+             * of 3 selected options.
+             *
+             * @param {jQuery} options
+             * @param {jQuery} select
+             * @returns {String}
+             */
+            buttonText: function(options, select) {
+                if (this.disabledText.length > 0
+                        && (select.prop('disabled') || (options.length == 0 && this.disableIfEmpty)))  {
+
+                    return this.disabledText;
+                }
+                else if (options.length === 0) {
+                    return this.nonSelectedText;
+                }
+                else if (this.allSelectedText
+                        && options.length === $('option', $(select)).length
+                        && $('option', $(select)).length !== 1
+                        && this.multiple) {
+
+                    if (this.selectAllNumber) {
+                        return this.allSelectedText + ' (' + options.length + ')';
+                    }
+                    else {
+                        return this.allSelectedText;
+                    }
+                }
+                else if (options.length > this.numberDisplayed) {
+                    return options.length + ' ' + this.nSelectedText;
+                }
+                else {
+                    var selected = '';
+                    var delimiter = this.delimiterText;
+
+                    options.each(function() {
+                        var label = ($(this).attr('label') !== undefined) ? $(this).attr('label') : $(this).text();
+                        selected += label + delimiter;
+                    });
+
+                    return selected.substr(0, selected.length - this.delimiterText.length);
+                }
+            },
+            /**
+             * Updates the title of the button similar to the buttonText function.
+             *
+             * @param {jQuery} options
+             * @param {jQuery} select
+             * @returns {@exp;selected@call;substr}
+             */
+            buttonTitle: function(options, select) {
+                if (options.length === 0) {
+                    return this.nonSelectedText;
+                }
+                else {
+                    var selected = '';
+                    var delimiter = this.delimiterText;
+
+                    options.each(function () {
+                        var label = ($(this).attr('label') !== undefined) ? $(this).attr('label') : $(this).text();
+                        selected += label + delimiter;
+                    });
+                    return selected.substr(0, selected.length - this.delimiterText.length);
+                }
+            },
+            checkboxName: function(option) {
+                return false; // no checkbox name
+            },
+            /**
+             * Create a label.
+             *
+             * @param {jQuery} element
+             * @returns {String}
+             */
+            optionLabel: function(element){
+                return $(element).attr('label') || $(element).text();
+            },
+            /**
+             * Create a class.
+             *
+             * @param {jQuery} element
+             * @returns {String}
+             */
+            optionClass: function(element) {
+                return $(element).attr('class') || '';
+            },
+            /**
+             * Triggered on change of the multiselect.
+             *
+             * Not triggered when selecting/deselecting options manually.
+             *
+             * @param {jQuery} option
+             * @param {Boolean} checked
+             */
+            onChange : function(option, checked) {
+
+            },
+            /**
+             * Triggered when the dropdown is shown.
+             *
+             * @param {jQuery} event
+             */
+            onDropdownShow: function(event) {
+
+            },
+            /**
+             * Triggered when the dropdown is hidden.
+             *
+             * @param {jQuery} event
+             */
+            onDropdownHide: function(event) {
+
+            },
+            /**
+             * Triggered after the dropdown is shown.
+             *
+             * @param {jQuery} event
+             */
+            onDropdownShown: function(event) {
+
+            },
+            /**
+             * Triggered after the dropdown is hidden.
+             *
+             * @param {jQuery} event
+             */
+            onDropdownHidden: function(event) {
+
+            },
+            /**
+             * Triggered on select all.
+             */
+            onSelectAll: function() {
+
+            },
+            /**
+             * Triggered on deselect all.
+             */
+            onDeselectAll: function() {
+
+            },
+            /**
+             * Triggered after initializing.
+             *
+             * @param {jQuery} $select
+             * @param {jQuery} $container
+             */
+            onInitialized: function($select, $container) {
+
+            },
+            /**
+             * Triggered on filtering.
+             *
+             * @param {jQuery} $filter
+             */
+            onFiltering: function($filter) {
+
+            },
+            enableHTML: false,
+            buttonClass: 'btn btn-default',
+            inheritClass: false,
+            buttonWidth: 'auto',
+            buttonContainer: '<div class="" />',
+            dropRight: false,
+            dropUp: false,
+            selectedClass: 'active',
+            // Maximum height of the dropdown menu.
+            // If maximum height is exceeded a scrollbar will be displayed.
+            maxHeight: false,
+            includeSelectAllOption: false,
+            includeSelectAllIfMoreThan: 0,
+            selectAllText: ' Select all',
+            selectAllValue: 'multiselect-all',
+            selectAllName: false,
+            selectAllNumber: true,
+            selectAllJustVisible: true,
+            enableFiltering: false,
+            enableCaseInsensitiveFiltering: false,
+            enableFullValueFiltering: false,
+            enableClickableOptGroups: false,
+            enableCollapsibleOptGroups: false,
+            filterPlaceholder: 'Search',
+            // possible options: 'text', 'value', 'both'
+            filterBehavior: 'text',
+            includeFilterClearBtn: true,
+            preventInputChangeEvent: false,
+            nonSelectedText: 'Select',
+           
+            nSelectedText: 'selected',
+            allSelectedText: 'All selected',
+            numberDisplayed: 1,
+            disableIfEmpty: false,
+            disabledText: '',
+            delimiterText: ', ',
+            templates: {
+                button: '<button type="button" class="multiselect dropdown-toggle btn-block text-left" data-toggle="dropdown"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
+                ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+                filter: '<li class="multiselect-item multiselect-filter"><div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
+                filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default multiselect-clear-filter" type="button"><i class="glyphicon glyphicon-remove-circle"></i></button></span>',
+                li: '<li><a tabindex="0"><label></label></a></li>',
+                divider: '<li class="multiselect-item divider"></li>',
+                liGroup: '<li class="multiselect-item multiselect-group"><label></label></li>'
+            }
+            
+            
+        },
+        
+        
+        
+
+        constructor: Multiselect,
+
+        /**
+         * Builds the container of the multiselect.
+         */
+        buildContainer: function() {
+            this.$container = $(this.options.buttonContainer);
+            this.$container.on('show.bs.dropdown', this.options.onDropdownShow);
+            this.$container.on('hide.bs.dropdown', this.options.onDropdownHide);
+            this.$container.on('shown.bs.dropdown', this.options.onDropdownShown);
+            this.$container.on('hidden.bs.dropdown', this.options.onDropdownHidden);
+        },
+
+        /**
+         * Builds the button of the multiselect.
+         */
+        buildButton: function() {
+            this.$button = $(this.options.templates.button).addClass(this.options.buttonClass);
+            if (this.$select.attr('class') && this.options.inheritClass) {
+                this.$button.addClass(this.$select.attr('class'));
+            }
+            // Adopt active state.
+            if (this.$select.prop('disabled')) {
+                this.disable();
+            }
+            else {
+                this.enable();
+            }
+
+            // Manually add button width if set.
+            if (this.options.buttonWidth && this.options.buttonWidth !== 'auto') {
+                this.$button.css({
+                    'width' : '100%', //this.options.buttonWidth,
+                    'overflow' : 'hidden',
+                    'text-overflow' : 'ellipsis'
+                });
+                this.$container.css({
+                    'width': this.options.buttonWidth
+                });
+            }
+
+            // Keep the tab index from the select.
+            var tabindex = this.$select.attr('tabindex');
+            if (tabindex) {
+                this.$button.attr('tabindex', tabindex);
+            }
+
+            this.$container.prepend(this.$button);
+        },
+
+        /**
+         * Builds the ul representing the dropdown menu.
+         */
+        buildDropdown: function() {
+
+            // Build ul.
+            this.$ul = $(this.options.templates.ul);
+
+            if (this.options.dropRight) {
+                this.$ul.addClass('pull-right');
+            }
+
+            // Set max height of dropdown menu to activate auto scrollbar.
+            if (this.options.maxHeight) {
+                // TODO: Add a class for this option to move the css declarations.
+                this.$ul.css({
+                    'max-height': this.options.maxHeight + 'px',
+                    'overflow-y': 'auto',
+                    'overflow-x': 'hidden'
+                });
+            }
+
+            if (this.options.dropUp) {
+
+                var height = Math.min(this.options.maxHeight, $('option[data-role!="divider"]', this.$select).length*26 + $('option[data-role="divider"]', this.$select).length*19 + (this.options.includeSelectAllOption ? 26 : 0) + (this.options.enableFiltering || this.options.enableCaseInsensitiveFiltering ? 44 : 0));
+                var moveCalc = height + 34;
+
+                this.$ul.css({
+                    'max-height': height + 'px',
+                    'overflow-y': 'auto',
+                    'overflow-x': 'hidden',
+                    'margin-top': "-" + moveCalc + 'px'
+                });
+            }
+
+            this.$container.append(this.$ul);
+        },
+
+        /**
+         * Build the dropdown options and binds all necessary events.
+         *
+         * Uses createDivider and createOptionValue to create the necessary options.
+         */
+        buildDropdownOptions: function() {
+
+            this.$select.children().each($.proxy(function(index, element) {
+
+                var $element = $(element);
+                // Support optgroups and options without a group simultaneously.
+                var tag = $element.prop('tagName')
+                    .toLowerCase();
+
+                if ($element.prop('value') === this.options.selectAllValue) {
+                    return;
+                }
+
+                if (tag === 'optgroup') {
+                    this.createOptgroup(element);
+                }
+                else if (tag === 'option') {
+
+                    if ($element.data('role') === 'divider') {
+                        this.createDivider();
+                    }
+                    else {
+                        this.createOptionValue(element);
+                    }
+
+                }
+
+                // Other illegal tags will be ignored.
+            }, this));
+
+            // Bind the change event on the dropdown elements.
+            $('li:not(.multiselect-group) input', this.$ul).on('change', $.proxy(function(event) {
+                var $target = $(event.target);
+
+                var checked = $target.prop('checked') || false;
+                var isSelectAllOption = $target.val() === this.options.selectAllValue;
+
+                // Apply or unapply the configured selected class.
+                if (this.options.selectedClass) {
+                    if (checked) {
+                        $target.closest('li')
+                            .addClass(this.options.selectedClass);
+                    }
+                    else {
+                        $target.closest('li')
+                            .removeClass(this.options.selectedClass);
+                    }
+                }
+
+                // Get the corresponding option.
+                var value = $target.val();
+                var $option = this.getOptionByValue(value);
+
+                var $optionsNotThis = $('option', this.$select).not($option);
+                var $checkboxesNotThis = $('input', this.$container).not($target);
+
+                if (isSelectAllOption) {
+
+                    if (checked) {
+                        this.selectAll(this.options.selectAllJustVisible, true);
+                    }
+                    else {
+                        this.deselectAll(this.options.selectAllJustVisible, true);
+                    }
+                }
+                else {
+                    if (checked) {
+                        $option.prop('selected', true);
+
+                        if (this.options.multiple) {
+                            // Simply select additional option.
+                            $option.prop('selected', true);
+                        }
+                        else {
+                            // Unselect all other options and corresponding checkboxes.
+                            if (this.options.selectedClass) {
+                                $($checkboxesNotThis).closest('li').removeClass(this.options.selectedClass);
+                            }
+
+                            $($checkboxesNotThis).prop('checked', false);
+                            $optionsNotThis.prop('selected', false);
+
+                            // It's a single selection, so close.
+                            this.$button.click();
+                        }
+
+                        if (this.options.selectedClass === "active") {
+                            $optionsNotThis.closest("a").css("outline", "");
+                        }
+                    }
+                    else {
+                        // Unselect option.
+                        $option.prop('selected', false);
+                    }
+
+                    // To prevent select all from firing onChange: #575
+                    this.options.onChange($option, checked);
+
+                    // Do not update select all or optgroups on select all change!
+                    this.updateSelectAll();
+
+                    if (this.options.enableClickableOptGroups && this.options.multiple) {
+                        this.updateOptGroups();
+                    }
+                }
+
+                this.$select.change();
+                this.updateButtonText();
+
+                if(this.options.preventInputChangeEvent) {
+                    return false;
+                }
+            }, this));
+
+            $('li a', this.$ul).on('mousedown', function(e) {
+                if (e.shiftKey) {
+                    // Prevent selecting text by Shift+click
+                    return false;
+                }
+            });
+
+            $('li a', this.$ul).on('touchstart click', $.proxy(function(event) {
+                event.stopPropagation();
+
+                var $target = $(event.target);
+
+                if (event.shiftKey && this.options.multiple) {
+                    if($target.is("label")){ // Handles checkbox selection manually (see https://github.com/davidstutz/bootstrap-multiselect/issues/431)
+                        event.preventDefault();
+                        $target = $target.find("input");
+                        $target.prop("checked", !$target.prop("checked"));
+                    }
+                    var checked = $target.prop('checked') || false;
+
+                    if (this.lastToggledInput !== null && this.lastToggledInput !== $target) { // Make sure we actually have a range
+                        var from = $target.closest("li").index();
+                        var to = this.lastToggledInput.closest("li").index();
+
+                        if (from > to) { // Swap the indices
+                            var tmp = to;
+                            to = from;
+                            from = tmp;
+                        }
+
+                        // Make sure we grab all elements since slice excludes the last index
+                        ++to;
+
+                        // Change the checkboxes and underlying options
+                        var range = this.$ul.find("li").slice(from, to).find("input");
+
+                        range.prop('checked', checked);
+
+                        if (this.options.selectedClass) {
+                            range.closest('li')
+                                .toggleClass(this.options.selectedClass, checked);
+                        }
+
+                        for (var i = 0, j = range.length; i < j; i++) {
+                            var $checkbox = $(range[i]);
+
+                            var $option = this.getOptionByValue($checkbox.val());
+
+                            $option.prop('selected', checked);
+                        }
+                    }
+
+                    // Trigger the select "change" event
+                    $target.trigger("change");
+                }
+
+                // Remembers last clicked option
+                if($target.is("input") && !$target.closest("li").is(".multiselect-item")){
+                    this.lastToggledInput = $target;
+                }
+
+                $target.blur();
+            }, this));
+
+            // Keyboard support.
+            this.$container.off('keydown.multiselect').on('keydown.multiselect', $.proxy(function(event) {
+                if ($('input[type="text"]', this.$container).is(':focus')) {
+                    return;
+                }
+
+                if (event.keyCode === 9 && this.$container.hasClass('open')) {
+                    this.$button.click();
+                }
+                else {
+                    var $items = $(this.$container).find("li:not(.divider):not(.disabled) a").filter(":visible");
+
+                    if (!$items.length) {
+                        return;
+                    }
+
+                    var index = $items.index($items.filter(':focus'));
+
+                    // Navigation up.
+                    if (event.keyCode === 38 && index > 0) {
+                        index--;
+                    }
+                    // Navigate down.
+                    else if (event.keyCode === 40 && index < $items.length - 1) {
+                        index++;
+                    }
+                    else if (!~index) {
+                        index = 0;
+                    }
+
+                    var $current = $items.eq(index);
+                    $current.focus();
+
+                    if (event.keyCode === 32 || event.keyCode === 13) {
+                        var $checkbox = $current.find('input');
+
+                        $checkbox.prop("checked", !$checkbox.prop("checked"));
+                        $checkbox.change();
+                    }
+
+                    event.stopPropagation();
+                    event.preventDefault();
+                }
+            }, this));
+
+            if (this.options.enableClickableOptGroups && this.options.multiple) {
+                $("li.multiselect-group input", this.$ul).on("change", $.proxy(function(event) {
+                    event.stopPropagation();
+
+                    var $target = $(event.target);
+                    var checked = $target.prop('checked') || false;
+
+                    var $li = $(event.target).closest('li');
+                    var $group = $li.nextUntil("li.multiselect-group")
+                        .not('.multiselect-filter-hidden')
+                        .not('.disabled');
+
+                    var $inputs = $group.find("input");
+
+                    var values = [];
+                    var $options = [];
+
+                    if (this.options.selectedClass) {
+                        if (checked) {
+                            $li.addClass(this.options.selectedClass);
+                        }
+                        else {
+                            $li.removeClass(this.options.selectedClass);
+                        }
+                    }
+
+                    $.each($inputs, $.proxy(function(index, input) {
+                        var value = $(input).val();
+                        var $option = this.getOptionByValue(value);
+
+                        if (checked) {
+                            $(input).prop('checked', true);
+                            $(input).closest('li')
+                                .addClass(this.options.selectedClass);
+
+                            $option.prop('selected', true);
+                        }
+                        else {
+                            $(input).prop('checked', false);
+                            $(input).closest('li')
+                                .removeClass(this.options.selectedClass);
+
+                            $option.prop('selected', false);
+                        }
+
+                        $options.push(this.getOptionByValue(value));
+                    }, this))
+
+                    // Cannot use select or deselect here because it would call updateOptGroups again.
+
+                    this.options.onChange($options, checked);
+
+                    this.updateButtonText();
+                    this.updateSelectAll();
+                }, this));
+            }
+
+            if (this.options.enableCollapsibleOptGroups && this.options.multiple) {
+                $("li.multiselect-group .caret-container", this.$ul).on("click", $.proxy(function(event) {
+                    var $li = $(event.target).closest('li');
+                    var $inputs = $li.nextUntil("li.multiselect-group")
+                            .not('.multiselect-filter-hidden');
+
+                    var visible = true;
+                    $inputs.each(function() {
+                        visible = visible && $(this).is(':visible');
+                    });
+
+                    if (visible) {
+                        $inputs.hide()
+                            .addClass('multiselect-collapsible-hidden');
+                    }
+                    else {
+                        $inputs.show()
+                            .removeClass('multiselect-collapsible-hidden');
+                    }
+                }, this));
+
+                $("li.multiselect-all", this.$ul).css('background', '#f3f3f3').css('border-bottom', '1px solid #eaeaea');
+                $("li.multiselect-all > a > label.checkbox", this.$ul).css('padding', '3px 20px 3px 35px');
+                $("li.multiselect-group > a > input", this.$ul).css('margin', '4px 0px 5px -20px');
+            }
+        },
+
+        /**
+         * Create an option using the given select option.
+         *
+         * @param {jQuery} element
+         */
+        createOptionValue: function(element) {
+            var $element = $(element);
+            if ($element.is(':selected')) {
+                $element.prop('selected', true);
+            }
+
+            // Support the label attribute on options.
+            var label = this.options.optionLabel(element);
+            var classes = this.options.optionClass(element);
+            var value = $element.val();
+            var inputType = this.options.multiple ? "checkbox" : "radio";
+
+            var $li = $(this.options.templates.li);
+            var $label = $('label', $li);
+            $label.addClass(inputType);
+            $li.addClass(classes);
+
+            if (this.options.enableHTML) {
+                $label.html(" " + label);
+            }
+            else {
+                $label.text(" " + label);
+            }
+
+            var $checkbox = $('<input/>').attr('type', inputType);
+
+            var name = this.options.checkboxName($element);
+            if (name) {
+                $checkbox.attr('name', name);
+            }
+
+            $label.prepend($checkbox);
+
+            var selected = $element.prop('selected') || false;
+            $checkbox.val(value);
+
+            if (value === this.options.selectAllValue) {
+                $li.addClass("multiselect-item multiselect-all");
+                $checkbox.parent().parent()
+                    .addClass('multiselect-all');
+            }
+
+            $label.attr('title', $element.attr('title'));
+
+            this.$ul.append($li);
+
+            if ($element.is(':disabled')) {
+                $checkbox.attr('disabled', 'disabled')
+                    .prop('disabled', true)
+                    .closest('a')
+                    .attr("tabindex", "-1")
+                    .closest('li')
+                    .addClass('disabled');
+            }
+
+            $checkbox.prop('checked', selected);
+
+            if (selected && this.options.selectedClass) {
+                $checkbox.closest('li')
+                    .addClass(this.options.selectedClass);
+            }
+        },
+
+        /**
+         * Creates a divider using the given select option.
+         *
+         * @param {jQuery} element
+         */
+        createDivider: function(element) {
+            var $divider = $(this.options.templates.divider);
+            this.$ul.append($divider);
+        },
+
+        /**
+         * Creates an optgroup.
+         *
+         * @param {jQuery} group
+         */
+        createOptgroup: function(group) {
+            var label = $(group).attr("label");
+            var value = $(group).attr("value");
+            var $li = $('<li class="multiselect-item multiselect-group"><a href="javascript:void(0);"><label><b></b></label></a></li>');
+
+            var classes = this.options.optionClass(group);
+            $li.addClass(classes);
+
+            if (this.options.enableHTML) {
+                $('label b', $li).html(" " + label);
+            }
+            else {
+                $('label b', $li).text(" " + label);
+            }
+
+            if (this.options.enableCollapsibleOptGroups && this.options.multiple) {
+                $('a', $li).append('<span class="caret-container"><b class="caret"></b></span>');
+            }
+
+            if (this.options.enableClickableOptGroups && this.options.multiple) {
+                $('a label', $li).prepend('<input type="checkbox" value="' + value + '"/>');
+            }
+
+            if ($(group).is(':disabled')) {
+                $li.addClass('disabled');
+            }
+
+            this.$ul.append($li);
+
+            $("option", group).each($.proxy(function($, group) {
+                this.createOptionValue(group);
+            }, this))
+        },
+
+        /**
+         * Build the select all.
+         *
+         * Checks if a select all has already been created.
+         */
+        buildSelectAll: function() {
+            if (typeof this.options.selectAllValue === 'number') {
+                this.options.selectAllValue = this.options.selectAllValue.toString();
+            }
+
+            var alreadyHasSelectAll = this.hasSelectAll();
+
+            if (!alreadyHasSelectAll && this.options.includeSelectAllOption && this.options.multiple
+                    && $('option', this.$select).length > this.options.includeSelectAllIfMoreThan) {
+
+                // Check whether to add a divider after the select all.
+                if (this.options.includeSelectAllDivider) {
+                    this.$ul.prepend($(this.options.templates.divider));
+                }
+
+                var $li = $(this.options.templates.li);
+                $('label', $li).addClass("checkbox");
+
+                if (this.options.enableHTML) {
+                    $('label', $li).html(" " + this.options.selectAllText);
+                }
+                else {
+                    $('label', $li).text(" " + this.options.selectAllText);
+                }
+
+                if (this.options.selectAllName) {
+                    $('label', $li).prepend('<input type="checkbox" name="' + this.options.selectAllName + '" />');
+                }
+                else {
+                    $('label', $li).prepend('<input type="checkbox" />');
+                }
+
+                var $checkbox = $('input', $li);
+                $checkbox.val(this.options.selectAllValue);
+
+                $li.addClass("multiselect-item multiselect-all");
+                $checkbox.parent().parent()
+                    .addClass('multiselect-all');
+
+                this.$ul.prepend($li);
+
+                $checkbox.prop('checked', false);
+            }
+        },
+
+        /**
+         * Builds the filter.
+         */
+        buildFilter: function() {
+
+            // Build filter if filtering OR case insensitive filtering is enabled and the number of options exceeds (or equals) enableFilterLength.
+            if (this.options.enableFiltering || this.options.enableCaseInsensitiveFiltering) {
+                var enableFilterLength = Math.max(this.options.enableFiltering, this.options.enableCaseInsensitiveFiltering);
+
+                if (this.$select.find('option').length >= enableFilterLength) {
+
+                    this.$filter = $(this.options.templates.filter);
+                    $('input', this.$filter).attr('placeholder', this.options.filterPlaceholder);
+
+                    // Adds optional filter clear button
+                    if(this.options.includeFilterClearBtn) {
+                        var clearBtn = $(this.options.templates.filterClearBtn);
+                        clearBtn.on('click', $.proxy(function(event){
+                            clearTimeout(this.searchTimeout);
+
+                            this.$filter.find('.multiselect-search').val('');
+                            $('li', this.$ul).show().removeClass('multiselect-filter-hidden');
+
+                            this.updateSelectAll();
+
+                            if (this.options.enableClickableOptGroups && this.options.multiple) {
+                                this.updateOptGroups();
+                            }
+
+                        }, this));
+                        this.$filter.find('.input-group').append(clearBtn);
+                    }
+
+                    this.$ul.prepend(this.$filter);
+
+                    this.$filter.val(this.query).on('click', function(event) {
+                        event.stopPropagation();
+                    }).on('input keydown', $.proxy(function(event) {
+                        // Cancel enter key default behaviour
+                        if (event.which === 13) {
+                          event.preventDefault();
+                      }
+
+                        // This is useful to catch "keydown" events after the browser has updated the control.
+                        clearTimeout(this.searchTimeout);
+
+                        this.searchTimeout = this.asyncFunction($.proxy(function() {
+
+                            if (this.query !== event.target.value) {
+                                this.query = event.target.value;
+
+                                var currentGroup, currentGroupVisible;
+                                $.each($('li', this.$ul), $.proxy(function(index, element) {
+                                    var value = $('input', element).length > 0 ? $('input', element).val() : "";
+                                    var text = $('label', element).text();
+
+                                    var filterCandidate = '';
+                                    if ((this.options.filterBehavior === 'text')) {
+                                        filterCandidate = text;
+                                    }
+                                    else if ((this.options.filterBehavior === 'value')) {
+                                        filterCandidate = value;
+                                    }
+                                    else if (this.options.filterBehavior === 'both') {
+                                        filterCandidate = text + '\n' + value;
+                                    }
+
+                                    if (value !== this.options.selectAllValue && text) {
+
+                                        // By default lets assume that element is not
+                                        // interesting for this search.
+                                        var showElement = false;
+
+                                        if (this.options.enableCaseInsensitiveFiltering) {
+                                            filterCandidate = filterCandidate.toLowerCase();
+                                            this.query = this.query.toLowerCase();
+                                        }
+
+                                        if (this.options.enableFullValueFiltering && this.options.filterBehavior !== 'both') {
+                                            var valueToMatch = filterCandidate.trim().substring(0, this.query.length);
+                                            if (this.query.indexOf(valueToMatch) > -1) {
+                                                showElement = true;
+                                            }
+                                        }
+                                        else if (filterCandidate.indexOf(this.query) > -1) {
+                                            showElement = true;
+                                        }
+
+                                        // Toggle current element (group or group item) according to showElement boolean.
+                                        $(element).toggle(showElement)
+                                            .toggleClass('multiselect-filter-hidden', !showElement);
+
+                                        // Differentiate groups and group items.
+                                        if ($(element).hasClass('multiselect-group')) {
+                                            // Remember group status.
+                                            currentGroup = element;
+                                            currentGroupVisible = showElement;
+                                        }
+                                        else {
+                                            // Show group name when at least one of its items is visible.
+                                            if (showElement) {
+                                                $(currentGroup).show()
+                                                    .removeClass('multiselect-filter-hidden');
+                                            }
+
+                                            // Show all group items when group name satisfies filter.
+                                            if (!showElement && currentGroupVisible) {
+                                                $(element).show()
+                                                    .removeClass('multiselect-filter-hidden');
+                                            }
+                                        }
+                                    }
+                                }, this));
+                            }
+
+                            this.updateSelectAll();
+
+                            if (this.options.enableClickableOptGroups && this.options.multiple) {
+                                this.updateOptGroups();
+                            }
+
+                            this.options.onFiltering(event.target);
+
+                        }, this), 300, this);
+                    }, this));
+                }
+            }
+        },
+
+        /**
+         * Unbinds the whole plugin.
+         */
+        destroy: function() {
+            this.$container.remove();
+            this.$select.show();
+
+            // reset original state
+            this.$select.prop('disabled', this.options.wasDisabled);
+
+            this.$select.data('multiselect', null);
+        },
+
+        /**
+         * Refreshs the multiselect based on the selected options of the select.
+         */
+        refresh: function () {
+            var inputs = $.map($('li input', this.$ul), $);
+
+            $('option', this.$select).each($.proxy(function (index, element) {
+                var $elem = $(element);
+                var value = $elem.val();
+                var $input;
+                for (var i = inputs.length; 0 < i--; /**/) {
+                    if (value !== ($input = inputs[i]).val())
+                        continue; // wrong li
+
+                    if ($elem.is(':selected')) {
+                        $input.prop('checked', true);
+
+                        if (this.options.selectedClass) {
+                            $input.closest('li')
+                                .addClass(this.options.selectedClass);
+                        }
+                    }
+                    else {
+                        $input.prop('checked', false);
+
+                        if (this.options.selectedClass) {
+                            $input.closest('li')
+                                .removeClass(this.options.selectedClass);
+                        }
+                    }
+
+                    if ($elem.is(":disabled")) {
+                        $input.attr('disabled', 'disabled')
+                            .prop('disabled', true)
+                            .closest('li')
+                            .addClass('disabled');
+                    }
+                    else {
+                        $input.prop('disabled', false)
+                            .closest('li')
+                            .removeClass('disabled');
+                    }
+                    break; // assumes unique values
+                }
+            }, this));
+
+            this.updateButtonText();
+            this.updateSelectAll();
+
+            if (this.options.enableClickableOptGroups && this.options.multiple) {
+                this.updateOptGroups();
+            }
+        },
+
+        /**
+         * Select all options of the given values.
+         *
+         * If triggerOnChange is set to true, the on change event is triggered if
+         * and only if one value is passed.
+         *
+         * @param {Array} selectValues
+         * @param {Boolean} triggerOnChange
+         */
+        select: function(selectValues, triggerOnChange) {
+            if(!$.isArray(selectValues)) {
+                selectValues = [selectValues];
+            }
+
+            for (var i = 0; i < selectValues.length; i++) {
+                var value = selectValues[i];
+
+                if (value === null || value === undefined) {
+                    continue;
+                }
+
+                var $option = this.getOptionByValue(value);
+                var $checkbox = this.getInputByValue(value);
+
+                if($option === undefined || $checkbox === undefined) {
+                    continue;
+                }
+
+                if (!this.options.multiple) {
+                    this.deselectAll(false);
+                }
+
+                if (this.options.selectedClass) {
+                    $checkbox.closest('li')
+                        .addClass(this.options.selectedClass);
+                }
+
+                $checkbox.prop('checked', true);
+                $option.prop('selected', true);
+
+                if (triggerOnChange) {
+                    this.options.onChange($option, true);
+                }
+            }
+
+            this.updateButtonText();
+            this.updateSelectAll();
+
+            if (this.options.enableClickableOptGroups && this.options.multiple) {
+                this.updateOptGroups();
+            }
+        },
+
+        /**
+         * Clears all selected items.
+         */
+        clearSelection: function () {
+            this.deselectAll(false);
+            this.updateButtonText();
+            this.updateSelectAll();
+
+            if (this.options.enableClickableOptGroups && this.options.multiple) {
+                this.updateOptGroups();
+            }
+        },
+
+        /**
+         * Deselects all options of the given values.
+         *
+         * If triggerOnChange is set to true, the on change event is triggered, if
+         * and only if one value is passed.
+         *
+         * @param {Array} deselectValues
+         * @param {Boolean} triggerOnChange
+         */
+        deselect: function(deselectValues, triggerOnChange) {
+            if(!$.isArray(deselectValues)) {
+                deselectValues = [deselectValues];
+            }
+
+            for (var i = 0; i < deselectValues.length; i++) {
+                var value = deselectValues[i];
+
+                if (value === null || value === undefined) {
+                    continue;
+                }
+
+                var $option = this.getOptionByValue(value);
+                var $checkbox = this.getInputByValue(value);
+
+                if($option === undefined || $checkbox === undefined) {
+                    continue;
+                }
+
+                if (this.options.selectedClass) {
+                    $checkbox.closest('li')
+                        .removeClass(this.options.selectedClass);
+                }
+
+                $checkbox.prop('checked', false);
+                $option.prop('selected', false);
+
+                if (triggerOnChange) {
+                    this.options.onChange($option, false);
+                }
+            }
+
+            this.updateButtonText();
+            this.updateSelectAll();
+
+            if (this.options.enableClickableOptGroups && this.options.multiple) {
+                this.updateOptGroups();
+            }
+        },
+
+        /**
+         * Selects all enabled & visible options.
+         *
+         * If justVisible is true or not specified, only visible options are selected.
+         *
+         * @param {Boolean} justVisible
+         * @param {Boolean} triggerOnSelectAll
+         */
+        selectAll: function (justVisible, triggerOnSelectAll) {
+
+            var justVisible = typeof justVisible === 'undefined' ? true : justVisible;
+            var allLis = $("li:not(.divider):not(.disabled):not(.multiselect-group)", this.$ul);
+            var visibleLis = $("li:not(.divider):not(.disabled):not(.multiselect-group):not(.multiselect-filter-hidden):not(.multiselect-collapisble-hidden)", this.$ul).filter(':visible');
+
+            if(justVisible) {
+                $('input:enabled' , visibleLis).prop('checked', true);
+                visibleLis.addClass(this.options.selectedClass);
+
+                $('input:enabled' , visibleLis).each($.proxy(function(index, element) {
+                    var value = $(element).val();
+                    var option = this.getOptionByValue(value);
+                    $(option).prop('selected', true);
+                }, this));
+            }
+            else {
+                $('input:enabled' , allLis).prop('checked', true);
+                allLis.addClass(this.options.selectedClass);
+
+                $('input:enabled' , allLis).each($.proxy(function(index, element) {
+                    var value = $(element).val();
+                    var option = this.getOptionByValue(value);
+                    $(option).prop('selected', true);
+                }, this));
+            }
+
+            $('li input[value="' + this.options.selectAllValue + '"]', this.$ul).prop('checked', true);
+
+            if (this.options.enableClickableOptGroups && this.options.multiple) {
+                this.updateOptGroups();
+            }
+
+            if (triggerOnSelectAll) {
+                this.options.onSelectAll();
+            }
+        },
+
+        /**
+         * Deselects all options.
+         *
+         * If justVisible is true or not specified, only visible options are deselected.
+         *
+         * @param {Boolean} justVisible
+         */
+        deselectAll: function (justVisible, triggerOnDeselectAll) {
+
+            var justVisible = typeof justVisible === 'undefined' ? true : justVisible;
+            var allLis = $("li:not(.divider):not(.disabled):not(.multiselect-group)", this.$ul);
+            var visibleLis = $("li:not(.divider):not(.disabled):not(.multiselect-group):not(.multiselect-filter-hidden):not(.multiselect-collapisble-hidden)", this.$ul).filter(':visible');
+
+            if(justVisible) {
+                $('input[type="checkbox"]:enabled' , visibleLis).prop('checked', false);
+                visibleLis.removeClass(this.options.selectedClass);
+
+                $('input[type="checkbox"]:enabled' , visibleLis).each($.proxy(function(index, element) {
+                    var value = $(element).val();
+                    var option = this.getOptionByValue(value);
+                    $(option).prop('selected', false);
+                }, this));
+            }
+            else {
+                $('input[type="checkbox"]:enabled' , allLis).prop('checked', false);
+                allLis.removeClass(this.options.selectedClass);
+
+                $('input[type="checkbox"]:enabled' , allLis).each($.proxy(function(index, element) {
+                    var value = $(element).val();
+                    var option = this.getOptionByValue(value);
+                    $(option).prop('selected', false);
+                }, this));
+            }
+
+            $('li input[value="' + this.options.selectAllValue + '"]', this.$ul).prop('checked', false);
+
+            if (this.options.enableClickableOptGroups && this.options.multiple) {
+                this.updateOptGroups();
+            }
+
+            if (triggerOnDeselectAll) {
+                this.options.onDeselectAll();
+            }
+        },
+
+        /**
+         * Rebuild the plugin.
+         *
+         * Rebuilds the dropdown, the filter and the select all option.
+         */
+        rebuild: function() {
+            this.$ul.html('');
+
+            // Important to distinguish between radios and checkboxes.
+            this.options.multiple = this.$select.attr('multiple') === "multiple";
+
+            this.buildSelectAll();
+            this.buildDropdownOptions();
+            this.buildFilter();
+
+            this.updateButtonText();
+            this.updateSelectAll(true);
+
+            if (this.options.enableClickableOptGroups && this.options.multiple) {
+                this.updateOptGroups();
+            }
+
+            if (this.options.disableIfEmpty && $('option', this.$select).length <= 0) {
+                this.disable();
+            }
+            else {
+                this.enable();
+            }
+
+            if (this.options.dropRight) {
+                this.$ul.addClass('pull-right');
+            }
+        },
+
+        /**
+         * The provided data will be used to build the dropdown.
+         */
+        dataprovider: function(dataprovider) {
+
+            var groupCounter = 0;
+            var $select = this.$select.empty();
+
+            $.each(dataprovider, function (index, option) {
+                var $tag;
+
+                if ($.isArray(option.children)) { // create optiongroup tag
+                    groupCounter++;
+
+                    $tag = $('<optgroup/>').attr({
+                        label: option.label || 'Group ' + groupCounter,
+                        disabled: !!option.disabled
+                    });
+
+                    forEach(option.children, function(subOption) { // add children option tags
+                        var attributes = {
+                            value: subOption.value,
+                            label: subOption.label || subOption.value,
+                            title: subOption.title,
+                            selected: !!subOption.selected,
+                            disabled: !!subOption.disabled
+                        };
+
+                        //Loop through attributes object and add key-value for each attribute
+                       for (var key in subOption.attributes) {
+                            attributes['data-' + key] = subOption.attributes[key];
+                       }
+                         //Append original attributes + new data attributes to option
+                        $tag.append($('<option/>').attr(attributes));
+                    });
+                }
+                else {
+
+                    var attributes = {
+                        'value': option.value,
+                        'label': option.label || option.value,
+                        'title': option.title,
+                      
+                        'selected': !!option.selected,
+                        'disabled': !!option.disabled
+                    };
+                    //Loop through attributes object and add key-value for each attribute
+                    for (var key in option.attributes) {
+                      attributes['data-' + key] = option.attributes[key];
+                    }
+                    //Append original attributes + new data attributes to option
+                    $tag = $('<option/>').attr(attributes);
+
+                    $tag.text(option.label || option.value);
+                }
+
+                $select.append($tag);
+            });
+
+            this.rebuild();
+        },
+
+        /**
+         * Enable the multiselect.
+         */
+        enable: function() {
+            this.$select.prop('disabled', false);
+            this.$button.prop('disabled', false)
+                .removeClass('disabled');
+        },
+
+        /**
+         * Disable the multiselect.
+         */
+        disable: function() {
+            this.$select.prop('disabled', true);
+            this.$button.prop('disabled', true)
+                .addClass('disabled');
+        },
+
+        /**
+         * Set the options.
+         *
+         * @param {Array} options
+         */
+        setOptions: function(options) {
+            this.options = this.mergeOptions(options);
+        },
+
+        /**
+         * Merges the given options with the default options.
+         *
+         * @param {Array} options
+         * @returns {Array}
+         */
+        mergeOptions: function(options) {
+            return $.extend(true, {}, this.defaults, this.options, options);
+        },
+
+        /**
+         * Checks whether a select all checkbox is present.
+         *
+         * @returns {Boolean}
+         */
+        hasSelectAll: function() {
+            return $('li.multiselect-all', this.$ul).length > 0;
+        },
+
+        /**
+         * Update opt groups.
+         */
+        updateOptGroups: function() {
+            var $groups = $('li.multiselect-group', this.$ul)
+            var selectedClass = this.options.selectedClass;
+
+            $groups.each(function() {
+                var $options = $(this).nextUntil('li.multiselect-group')
+                    .not('.multiselect-filter-hidden')
+                    .not('.disabled');
+
+                var checked = true;
+                $options.each(function() {
+                    var $input = $('input', this);
+
+                    if (!$input.prop('checked')) {
+                        checked = false;
+                    }
+                });
+
+                if (selectedClass) {
+                    if (checked) {
+                        $(this).addClass(selectedClass);
+                    }
+                    else {
+                        $(this).removeClass(selectedClass);
+                    }
+                }
+
+                $('input', this).prop('checked', checked);
+            });
+        },
+
+        /**
+         * Updates the select all checkbox based on the currently displayed and selected checkboxes.
+         */
+        updateSelectAll: function(notTriggerOnSelectAll) {
+            if (this.hasSelectAll()) {
+                var allBoxes = $("li:not(.multiselect-item):not(.multiselect-filter-hidden):not(.multiselect-group):not(.disabled) input:enabled", this.$ul);
+                var allBoxesLength = allBoxes.length;
+                var checkedBoxesLength = allBoxes.filter(":checked").length;
+                var selectAllLi  = $("li.multiselect-all", this.$ul);
+                var selectAllInput = selectAllLi.find("input");
+
+                if (checkedBoxesLength > 0 && checkedBoxesLength === allBoxesLength) {
+                    selectAllInput.prop("checked", true);
+                    selectAllLi.addClass(this.options.selectedClass);
+                }
+                else {
+                    selectAllInput.prop("checked", false);
+                    selectAllLi.removeClass(this.options.selectedClass);
+                }
+            }
+        },
+
+        /**
+         * Update the button text and its title based on the currently selected options.
+         */
+        updateButtonText: function() {
+            var options = this.getSelected();
+
+            // First update the displayed button text.
+            if (this.options.enableHTML) {
+                $('.multiselect .multiselect-selected-text', this.$container).html(this.options.buttonText(options, this.$select));
+            }
+            else {
+                $('.multiselect .multiselect-selected-text', this.$container).text(this.options.buttonText(options, this.$select));
+            }
+
+            // Now update the title attribute of the button.
+            $('.multiselect', this.$container).attr('title', this.options.buttonTitle(options, this.$select));
+        },
+
+        /**
+         * Get all selected options.
+         *
+         * @returns {jQUery}
+         */
+        getSelected: function() {
+            return $('option', this.$select).filter(":selected");
+        },
+
+        /**
+         * Gets a select option by its value.
+         *
+         * @param {String} value
+         * @returns {jQuery}
+         */
+        getOptionByValue: function (value) {
+
+            var options = $('option', this.$select);
+            var valueToCompare = value.toString();
+
+            for (var i = 0; i < options.length; i = i + 1) {
+                var option = options[i];
+                if (option.value === valueToCompare) {
+                    return $(option);
+                }
+            }
+        },
+
+        /**
+         * Get the input (radio/checkbox) by its value.
+         *
+         * @param {String} value
+         * @returns {jQuery}
+         */
+        getInputByValue: function (value) {
+
+            var checkboxes = $('li input:not(.multiselect-search)', this.$ul);
+            var valueToCompare = value.toString();
+
+            for (var i = 0; i < checkboxes.length; i = i + 1) {
+                var checkbox = checkboxes[i];
+                if (checkbox.value === valueToCompare) {
+                    return $(checkbox);
+                }
+            }
+        },
+
+        /**
+         * Used for knockout integration.
+         */
+        updateOriginalOptions: function() {
+            this.originalOptions = this.$select.clone()[0].options;
+        },
+
+        asyncFunction: function(callback, timeout, self) {
+            var args = Array.prototype.slice.call(arguments, 3);
+            return setTimeout(function() {
+                callback.apply(self || window, args);
+            }, timeout);
+        },
+
+        setAllSelectedText: function(allSelectedText) {
+            this.options.allSelectedText = allSelectedText;
+            this.updateButtonText();
+        }
+    };
+
+    $.fn.multiselect = function(option, parameter, extraOptions) {
+        return this.each(function() {
+            var data = $(this).data('multiselect');
+            var options = typeof option === 'object' && option;
+
+            // Initialize the multiselect.
+            if (!data) {
+                data = new Multiselect(this, options);
+                $(this).data('multiselect', data);
+            }
+
+            // Call multiselect method.
+            if (typeof option === 'string') {
+                data[option](parameter, extraOptions);
+
+                if (option === 'destroy') {
+                    $(this).data('multiselect', false);
+                }
+            }
+        });
+    };
+
+    $.fn.multiselect.Constructor = Multiselect;
+
+    $(function() {
+        $("select[data-role=multiselect]").multiselect();
+    });
+
+}(window.jQuery);
+</script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.multiselect-ui').multiselect({
+            onChange: function(option, checked) {
+                // Get selected options.
+                var selectedOptions = $('.multiselect-ui option:selected');
+ 
+                if (selectedOptions.length >= 2) {
+                    // Disable all other checkboxes.
+                    var nonSelectedOptions = $('.multiselect-ui option').filter(function() {
+                        return !$(this).is(':selected');
+                    });
+ 
+                    nonSelectedOptions.each(function() {
+                        var input = $('input[value="' + $(this).val() + '"]');
+                        input.prop('disabled', true);
+                        input.parent('li').addClass('disabled');
+                    });
+                }
+                else {
+                    // Enable all checkboxes.
+                    $('.multiselect-ui option').each(function() {
+                        var input = $('input[value="' + $(this).val() + '"]');
+                        input.prop('disabled', false);
+                        input.parent('li').addClass('disabled');
+                    });
+                }
+            }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.multiselect-ui1').multiselect({
+            onChange: function(option, checked) {
+                // Get selected options.
+                var selectedOptions = $('.multiselect-ui1 option:selected');
+ 
+                if (selectedOptions.length >= 2) {
+                    // Disable all other checkboxes.
+                    var nonSelectedOptions = $('.multiselect-ui1 option').filter(function() {
+                        return !$(this).is(':selected');
+                    });
+ 
+                    
+                }
+                else {
+                    // Enable all checkboxes.
+                    $('.multiselect-ui1 option').each(function() {
+                        var input = $('input[value="' + $(this).val() + '"]');
+                        input.prop('disabled', false);
+                        input.parent('li').addClass('disabled');
+                    });
+                }
+            }
+        });
+    });
+</script>
+
+<br><br><br><br>
+<!-- footer -->
+<div class="footer">
+		<div class="container">
+			<div class="social">
+				<ul>
+					<li><a href="https://www.facebook.com/NaukriJob-176693432951308/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://twitter.com/naukrijob12"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://www.instagram.com/mynaukrijob/"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+				</ul>
+			</div>
+			
+			<div class="agileits-w3layouts-copyright">
+				
+				<p>Â© 2018 . All rights reserved | Design by <a href="http://eagletkinfotech.co.in/" target="_blank">Eagle TK Infotech Pvt.Ltd. | </a><a href="#" target="_blank">Contact Us</a>  Support@naukrijob.co.in</p>
+			
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+
+<!-- //scrolling script -->
+
+        
+</body>
+<br>
+
+</html>

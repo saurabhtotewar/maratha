@@ -1,0 +1,872 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>मराठा वधू-वर केन्द्</title>
+<link rel="icon" type="image/x-icon" href="images/slider/Kalash.png">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+<link href="css1/font-awesome.min.css" rel="stylesheet">
+<link href="css1/common.css" rel="stylesheet">
+<link href="css1/form.css" rel="stylesheet">
+<link href="css1/profile.css" rel="stylesheet">
+<link href="css1/search_result.css" rel="stylesheet">
+<link href="css1/membership.css" rel="stylesheet">
+<link href="css1/static_content.css" rel="stylesheet">
+<link href="css1/gallery.css" rel="stylesheet">
+<link href="css1/mainstyle.css" rel="stylesheet">
+<link href="css1/media_query.css" rel="stylesheet">
+
+<!-- <script type="text/javascript">  
+function matchpass(){  
+var firstpassword=document.f1.password.value;  
+var secondpassword=document.f1.password2.value;  
+  
+if(firstpassword==secondpassword){  
+return true;  
+}  
+else{  
+alert("password must be same!");  
+return false;  
+}  
+}  
+</script>  -->
+
+
+
+</head>
+
+
+<body class="ragistration">
+<div class="w3l-main" id="home">
+
+
+<div class="header-w3">
+			
+			<div class="header-bottom-agile">
+				<div class=" navigation">
+					<nav class="navbar navbar-default cl-effect-16" id="cl-effect-16">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+						<div class="logo-agileinfo">
+					<h1 style="margin: 15px; color: #000000;">मराठा वधू-वर केन्द्</h1>
+						</div>
+
+						<div id="navbar" class="navbar-collapse navbar-right collapse hover-effect">
+							<ul class="nav navbar-nav">
+								<li ><a href="index.html" data-hover="Home">Home</a></li>
+								<li><a href="about.html"  data-hover="About">About</a></li>
+							<li class="active"><a href="register.html"  data-hover="Registration">Registration</a></li>
+								<li><a href="login.html"  data-hover="Login">Login</a></li>
+							
+								<li><a href="contact.html" data-hover="Contact" class="scroll">Contact</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+</div>
+<hr>
+
+  <section class="wrapper">
+    <div class="container">
+    <h5 class="Ourvarious2">Create Your Profile </h5> 
+  </div>
+   
+	<form action="" method="post" name="MatriForm">
+    <div class="container clearfix">
+      <div class="registration">
+        <h5 class="heading">Basic Information</h5>
+        <div class="form-group row">
+          <div class="col-sm-6">
+		    <label>First Name</label>
+            <input id="txtName" class="form-control" type="text" onkeypress="return onKeyValidate(event,alpha);"  name="firstName" placeholder="Enter Your First Name" required>
+			 
+          </div>
+          <div class="col-sm-6">
+		    <label>Last Name</label>
+            <input id="txtLastName" class="form-control" type="text" onkeypress="return onKeyValidate(event,alpha);"  name="lastName" placeholder="Enter Your Last Name" required>
+          </div>  
+        </div>
+    
+        <div class="form-group row">
+            <div class="col-sm-6">
+              <label>Gender</label>
+              <div class="clearfix"> 
+                <div class="radio radio-inline">
+                  <input type="radio" value="Male" id="Male" name="gender" required checked="checked">
+                  <label for="Male" class="malelable">Male</label>
+                </div>
+                <div class="radio radio-inline">
+                  <input type="radio" value="Female" id="Female" name="gender" required>
+                  <label for="Female" class="">Female</label>
+                </div>   
+              </div>
+          </div>
+          <div class="col-sm-6">
+          <label>Marital Status</label>
+          <div class="radio radio-inline">
+            <input type="radio" id="unmarried" value="1" name="maritalStatus" checked required>
+            <label for="unmarried" class="malelable">Unmarried</label>
+          </div>
+          <div class="radio radio-inline">  
+            <input type="radio" id="widow/widower" value="2" name="maritalStatus" required>
+            <label for="widow/widower" class="">Widow/Widower</label>
+          </div>
+          <div class="radio radio-inline">  
+            <input type="radio" id="divorcee" value="3" name="maritalStatus" required>
+            <label for="divorcee" class="">Divorcee</label>
+          </div>
+          <div class="radio radio-inline">  
+            <input type="radio" id="separated" value="4" name="maritalStatus" required>
+            <label for="separated" class="">Separated</label>
+          </div>
+        </div>
+      </div>
+		
+	
+  		  <div class="form-group row">
+          <div class="col-sm-4">
+            <label>Cast</label>
+                <select data-ref-type="reg-caste" id="religion" class="forminpt js-religion form-control" name="caste" >
+                  <option value="Maratha">Maratha</option>
+				</select>
+          </div>
+          
+           <div class="col-sm-4">
+              <label>Sub-Cast</label>
+          
+               <select class="form-control" id="" name="subCaste">
+           
+            <option value="Deshmukh">Deshmukh</option>
+            <option value="96 Kuli" selected>96 Kuli</option>
+            <option value="Maratha">Maratha</option>
+            <option value="Kunbi">Kunbi</option>
+             <option value="Deshmukh Maratha">Deshmukh Maratha</option>
+            <option value="96 Kuli Maratha">96 Kuli Maratha</option>
+            <option value="Tirale Kunbi">Tirale Kunbi</option>
+     
+    </select>
+				</select>      
+           </div>
+
+            <div class="col-sm-4">
+               <label>Date of Birth</label>
+            <input class="form-control" type="date" id="txtDate" name="dob" required style="height: 42px;">
+           </div>
+
+      <!--      <div class="col-sm-4">
+            <label>Sub-Cast</label>
+           <select data-ref-type="reg-caste" data-sub-caste-fld-name="txtSubcaste" id="sub_caste" class="forminpt js-sub-caste form-control" name="txtSubcaste" disabled="disabled" required>
+				</select>
+				<input type="text" style="display:none;" data-ref-type="reg-caste" maxlength="50" size="40" id="txtSubcaste" value="" class="forminpt js-txt-sub-caste form-control" name="txtSubcaste" disabled="disabled">
+           </div> -->
+        </div>
+        </div>
+        <div class="registration">
+        <h5 class="heading">New Account Information.</h5>
+
+		<div class="form-group row">
+          <div class="col-sm-6">
+		  <label>Profile Created By</label>
+          <select class="form-control" id="postedby" name="profileCreatedBy">
+            <option value="">Select</option>
+            <option value="Self">Self</option>
+		  <option value="Parents">Parents</option>
+		  <option value="Brother">Brother</option>
+      <option value="Sister">Sister</option>
+      <option value="Friend">Friend</option>
+		  <option value="Relative">Relative</option>
+    </select>
+          </div>
+                
+       
+          <div class="col-sm-6">
+		  <label>Email ID</label>
+            <input id="EMAILconfirm" class="form-control" type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Enter Your Email ID" >
+          </div>
+                
+        </div>
+		
+		<div class="form-group row">
+         	<div class="col-sm-6">
+			<label>Password</label>
+            <input id="inputPassword" class="form-control" type="password"  name="password" placeholder="Enter New Password" required>
+          </div>
+          <div class="col-sm-6">
+		  <label>Confirm Password</label>
+            <input id="confirm_password" class="form-control" type="password"  name="confirm" placeholder="Confirm Password" required>
+          </div>  
+                
+        </div>
+	
+		
+		<div class="form-group row">
+          <div class="col-sm-6">
+		  <label>Mobile Number</label>
+            <input id="txtMobile" class="form-control" type="text" minlength="10"  maxlength="10" pattern="[789][0-9]{9}" name="mobile" placeholder="Enter Your Mobile Number" >
+          </div>
+          <div class="col-sm-6">
+		  <label>Alternate Contact Number</label>
+            <input id="txtPhone" class="form-control" type="text" minlength="10"  maxlength="10" pattern="[789][0-9]{9}" name="phone" placeholder="Enter Alternate Contact Number">
+          </div>
+        </div>
+        </div>
+
+        <div class="registration">
+        <h5 class="heading">Socio Religious Attributes </h5>
+        
+
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label>Gothra</label>
+            <input id="txtGothra" class="form-control" type="text" name="gothra" placeholder="Enter Your Gothra">
+          </div>
+          <div class="col-sm-6">
+           <label>Moonsign</label>
+           
+            <select id="txtMoon" class="form-control" name="moonsign">
+                        <option value="Does not matter">Does not matter</option>
+                        <option value="Mesh (Aries)">Mesh (Aries)</option>
+                        <option value="Vrishabh (Taurus)">Vrishabh (Taurus)</option>
+                        <option value="Mithun (Gemini)">Mithun (Gemini)</option>
+                        <option value="Karka (Cancer)">Karka (Cancer)</option>
+                        <option value="Simha (Leo)">Simha (Leo)</option>
+                        <option value="Kanya (Virgo)">Kanya (Virgo)</option>
+                        <option value="Tula (Libra)">Tula (Libra)</option>
+                        <option value="Vrischika (Scorpio)">Vrischika (Scorpio)</option>
+                        <option value="Dhanu (Sagittarious)">Dhanu (Sagittarious)</option>
+                        <option value="Makar (Capricorn)">Makar (Capricorn)</option>
+                        <option value="Kumbha (Aquarious)">Kumbha (Aquarious)</option>
+                        <option value="Meen (Pisces)">Meen (Pisces)</option>
+                      </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-6">
+          <label>Horos Match :</label>    
+          <div class="radio radio-inline">
+            <input type="radio" value="No" checked="checked" id="no" name="horosMatch" >
+            <label for="no" class="malelable">No</label>
+          </div>
+          <div class="radio radio-inline">  
+            <input type="radio" name="horosMatch" id="yes" value="Yes" >
+            <label for="yes" class="">Yes</label>
+          </div>
+          
+          <div class="radio radio-inline">  
+            <input type="radio" name="horosMatch" id="not_applicable" value="NA" >
+            <label for="not_applicable" class="">Not Applicable</label>
+          </div>
+      </div>
+      
+        <div class="col-sm-6">
+          <label>Manglik</label>
+           <div class="radio radio-inline">
+            <input type="radio" value="No" checked="checked" id="no2" name="manglik">
+            <label for="no2" class="malelable">No</label>
+          </div>
+          <div class="radio radio-inline">  
+            <input type="radio" name="manglik" id="yes2" value="Yes">
+            <label for="yes2" class="">Yes</label>
+          </div>
+          
+          <div class="radio radio-inline">  
+            <input type="radio" name="manglik" id="not_applicable2" value="NA">
+            <label for="not_applicable2" class="">Not Applicable</label>
+          </div>
+        </div>
+    </div>
+		    
+		
+    		<div class="form-group row">
+          <div class="col-sm-6">
+		  <label>Birth Place</label>
+            <input class="form-control" type="text" name="birthPlace">  
+          </div>
+          <div class="col-sm-6">
+		  <label>Birth Time</label>
+            <input class="form-control" type="time" name="birthTime">
+          </div>
+        </div>
+        </div>
+		
+		
+		
+        <div class="registration">
+    		<h5 class="heading">Physical Attributes</h5>
+        <div class="form-group row">
+      		<div class="col-sm-6">
+            <label>Height</label>     
+      		<select class="form-control" name="height">
+                                <option selected="" value="">- Select -</option>
+                                <option value="1">Below 4ft</option>
+                                <option value="2">4ft 6in</option>
+                                <option value="3">4ft 7in</option>
+                                <option value="4">4ft 8in</option>
+                                <option value="5">4ft 9in</option>
+                                <option value="6">4ft 10in</option>
+                                <option value="7">4ft 11in</option>
+                                <option value="8">5ft</option>
+                                <option value="9">5ft 1in</option>
+                                <option value="10">5ft 2in</option>
+                                <option value="11">5ft 3in</option>
+                                <option value="12">5ft 4in</option>
+                                <option value="13">5ft 5in</option>
+                                <option value="14">5ft 6in</option>
+                                <option value="15">5ft 7in</option>
+                                <option value="16">5ft 8in</option>
+                                <option value="17">5ft 9in</option>
+                                <option value="18">5ft 10in</option>
+                                <option value="19">5ft 11in</option>
+                                <option value="20">6ft</option>
+                                <option value="21">6ft 1in</option>
+                                <option value="22">6ft 2in</option>
+                                <option value="23">6ft 3in</option>
+                                <option value="24">6ft 4in</option>
+                                <option value="25">6ft 5in</option>
+                                <option value="26">6ft 6in</option>
+                                <option value="27">6ft 7in</option>
+                                <option value="28">6ft 8in</option>
+                                <option value="29">6ft 9in</option>
+                                <option value="30">6ft 10in</option>
+                                <option value="31">6ft 11in</option>
+                                <option value="32">7ft</option>
+                                <option value="33">Above 7ft</option>
+                              </select>
+          </div>
+          <div class="col-sm-6">
+            <label>Weight</label>
+           <select class="form-control" name="weight">
+                                <option selected="selected" value="0">- Select -</option>
+                                <option value="41 kg">41 kg</option>
+                                <option value="42 kg">42 kg</option>
+                                <option value="43 kg">43 kg</option>
+                                <option value="44 kg">44 kg</option>
+                                <option value="45 kg">45 kg</option>
+                                <option value="46 kg">46 kg</option>
+                                <option value="47 kg">47 kg</option>
+                                <option value="48 kg">48 kg</option>
+                                <option value="49 kg">49 kg</option>
+                                <option value="50 kg">50 kg</option>
+                                <option value="51 kg">51 kg</option>
+                                <option value="52 kg">52 kg</option>
+                                <option value="53 kg">53 kg</option>
+                                <option value="54 kg">54 kg</option>
+                                <option value="55 kg">55 kg</option>
+                                <option value="56 kg">56 kg</option>
+                                <option value="57 kg">57 kg</option>
+                                <option value="58 kg">58 kg</option>
+                                <option value="59 kg">59 kg</option>
+                                <option value="60 kg">60 kg</option>
+                                <option value="61 kg">61 kg</option>
+                                <option value="62 kg">62 kg</option>
+                                <option value="63 kg">63 kg</option>
+                                <option value="64 kg">64 kg</option>
+                                <option value="65 kg">65 kg</option>
+                                <option value="66 kg">66 kg</option>
+                                <option value="67 kg">67 kg</option>
+                                <option value="68 kg">68 kg</option>
+                                <option value="69 kg">69 kg</option>
+                                <option value="70 kg">70 kg</option>
+                                <option value="71 kg">71 kg</option>
+                                <option value="72 kg">72 kg</option>
+                                <option value="73 kg">73 kg</option>
+                                <option value="74 kg">74 kg</option>
+                                <option value="75 kg">75 kg</option>
+                                <option value="76 kg">76 kg</option>
+                                <option value="77 kg">77 kg</option>
+                                <option value="78 kg">78 kg</option>
+                                <option value="79 kg">79 kg</option>
+                                <option value="80 kg">80 kg</option>
+                                <option value="81 kg">81 kg</option>
+                                <option value="82 kg">82 kg</option>
+                                <option value="83 kg">83 kg</option>
+                                <option value="84 kg">84 kg</option>
+                                <option value="85 kg">85 kg</option>
+                                <option value="86 kg">86 kg</option>
+                                <option value="87 kg">87 kg</option>
+                                <option value="88 kg">88 kg</option>
+                                <option value="89 kg">89 kg</option>
+                                <option value="90 kg">90 kg</option>
+                                <option value="91 kg">91 kg</option>
+                                <option value="92 kg">92 kg</option>
+                                <option value="93 kg">93 kg</option>
+                                <option value="94 kg">94 kg</option>
+                                <option value="95 kg">95 kg</option>
+                                <option value="96 kg">96 kg</option>
+                                <option value="97 kg">97 kg</option>
+                                <option value="98 kg">98 kg</option>
+                                <option value="99 kg">99 kg</option>
+                                <option value="100 kg">100 kg</option>
+                               
+                              </select>
+          </div>
+        </div>  
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label>Blood Group</label>
+         <select id="txtBlood" class="form-control" name="bloodGroup">
+                                <option selected="" value="">- Select -</option>
+                                <option>A+</option>
+                                <option>A-</option>
+                                <option>AB+</option>
+                                <option>AB-</option>
+                                <option>B+</option>
+                                <option>B-</option>
+                                <option>O+</option>
+                                <option>O-</option>
+                              </select>
+          </div>
+
+          <div class="col-sm-6">
+            <label>Complexion</label>
+             <select id="txtComplexion" class="form-control" name="complexion">
+                                <option selected="" value="">- Select -</option>
+                                <option value="Very Fair">Very Fair</option>
+                                <option value="Fair">Fair</option>
+                                <option value="Wheatish">Wheatish</option>
+                                <option value="Wheatish Medium">Wheatish Medium</option>
+                                <option value="Wheatish Brown">Wheatish Brown</option>
+                                <option value="Dark">Dark</option>
+                              </select>
+          </div>
+        </div>
+
+    		<div class="form-group row">
+    			<div class="col-sm-6">
+          <label>Physical Status *</label>
+          <div class="radio radio-inline">
+            <input type="radio" value="No" checked="checked"  id="Pno" name="physicallychallenged">
+            <label for="Pno" class="malelable">Normal</label>
+          </div>
+          <div class="radio radio-inline">  
+            <input type="radio" value="Yes" id="Pyes" name="physicallychallenged">
+            <label for="Pyes" class="malelable">Physically challenged</label>
+          </div>
+       
+	   
+	 
+					</div>
+    		<div class="col-sm-6">
+           <label>Upload Photo *</label>
+            <input type="file">
+        </div>
+    </div>
+		
+
+
+       
+      </div>
+
+  <div class="registration">
+        <h5 class="heading">Education Details</h5>
+
+    <div class="form-group row">
+          <div class="col-sm-6">
+      <label>Educational Area</label>
+          <select class="form-control" id="postedby" name="educationalArea">
+            <option value="">Select</option>
+      <option value="Graduate">Graduate</option>
+      <option value="Post Graduate">Post Graduate</option>
+      <option value="Doctor">Doctor</option>
+      <option value="Engineer">Engineer</option>
+     
+    </select>
+          </div>
+                
+       
+          <div class="col-sm-6">
+      <label>Education</label>
+            <input class="form-control" type="text" name="education" placeholder="Enter Your Education">
+          </div>
+                
+        </div>
+    
+    <div class="form-group row">
+          <div class="col-sm-6">
+      <label>Occupation</label>
+            <input class="form-control" type="text"  name="occupation" placeholder="Enter Your Occupation">
+          </div>
+          <div class="col-sm-6">
+      <label>Occupation City</label>
+           
+              <select class="form-control" id="" name="occupationCity">
+            <option value="">Select City</option>
+            <option value="Mumbai"> Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Nashik">Nashik</option>
+            <option value="Vasai-Virar"> Vasai-Virar</option>
+            <option value="Aurangabad">Aurangabad</option>
+            <option value="Solapur">Solapur</option>
+            <option value="Dhule ">Dhule </option>
+            <option value="Amravati "> Amravati </option>
+            <option value="Malegaon">Malegaon</option>
+            <option value="Kolhapur">Kolhapur</option>
+            <option value="Nanded">Nanded</option>
+            <option value=" Sangli">   Sangli</option>
+            <option value="Bhiwandi-Nizampur">Bhiwandi-Nizampur</option>
+            <option value="Akola">Akola</option>
+            <option value="Latur">Latur</option>
+            <option value="Ahmednagar"> Ahmednagar</option>
+            <option value="Jalgaon">Jalgaon</option>
+            <option value="Ichalkaranji">Ichalkaranji</option>
+            <option value="Chandrapur">Chandrapur</option>
+             <option value="Parbhani">Parbhani</option> 
+             <option value="Jalna">Jalna</option>
+              <option value="Bhusawal ">Bhusawal </option>
+               <option value="Panvel">Panvel</option>
+                <option value="Satara">Satara</option>
+                 <option value="Beed">Beed</option>
+                  <option value="Yavatmal">Yavatmal</option>
+                   <option value="Kamptee">Kamptee</option>
+                    <option value="Gondia">Gondia</option>
+                     <option value="Barshi">Barshi</option>
+                      <option value=" Achalpur"> Achalpur</option>
+                       <option value="Osmanabad">Osmanabad</option>
+                        <option value="Nandurbar">Nandurbar</option>
+                         <option value="Wardha">Wardha</option>
+                          <option value="Udgir">Udgir</option>
+
+     
+            </select>
+          </div>  
+                
+        </div>
+  
+    
+    <div class="form-group row">
+          <div class="col-sm-6">
+      <label>Education City</label>
+           
+                      <select class="form-control" id="" name="educationCity">
+            <option value="">Select City</option>
+            <option value="Mumbai"> Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Nashik">Nashik</option>
+            <option value="Vasai-Virar"> Vasai-Virar</option>
+            <option value="Aurangabad">Aurangabad</option>
+            <option value="Solapur">Solapur</option>
+            <option value="Dhule ">Dhule </option>
+            <option value="Amravati "> Amravati </option>
+            <option value="Malegaon">Malegaon</option>
+            <option value="Kolhapur">Kolhapur</option>
+            <option value="Nanded">Nanded</option>
+            <option value=" Sangli">   Sangli</option>
+            <option value="Bhiwandi-Nizampur">Bhiwandi-Nizampur</option>
+            <option value="Akola">Akola</option>
+            <option value="Latur">Latur</option>
+            <option value="Ahmednagar"> Ahmednagar</option>
+            <option value="Jalgaon">Jalgaon</option>
+            <option value="Ichalkaranji">Ichalkaranji</option>
+            <option value="Chandrapur">Chandrapur</option>
+             <option value="Parbhani">Parbhani</option> 
+             <option value="Jalna">Jalna</option>
+              <option value="Bhusawal ">Bhusawal </option>
+               <option value="Panvel">Panvel</option>
+                <option value="Satara">Satara</option>
+                 <option value="Beed">Beed</option>
+                  <option value="Yavatmal">Yavatmal</option>
+                   <option value="Kamptee">Kamptee</option>
+                    <option value="Gondia">Gondia</option>
+                     <option value="Barshi">Barshi</option>
+                      <option value=" Achalpur"> Achalpur</option>
+                       <option value="Osmanabad">Osmanabad</option>
+                        <option value="Nandurbar">Nandurbar</option>
+                         <option value="Wardha">Wardha</option>
+                          <option value="Udgir">Udgir</option>
+                         
+     
+            </select>
+          </div>
+          <div class="col-sm-6">
+      <label>Income/Annum</label>
+            <input class="form-control" type="text" name="income" placeholder="Enter Your Annual Income">
+          </div>
+        </div>
+        </div>
+
+  <div class="registration">
+        <h5 class="heading">Expectation Details</h5>
+
+    <div class="form-group row">
+          <div class="col-sm-6">
+      <label>Preferred City</label>
+          <select class="form-control" name="preferredCity">
+             <option value="">Select City</option>
+            <option value="Mumbai"> Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Nashik">Nashik</option>
+            <option value="Vasai-Virar"> Vasai-Virar</option>
+            <option value="Aurangabad">Aurangabad</option>
+            <option value="Solapur">Solapur</option>
+            <option value="Dhule ">Dhule </option>
+            <option value="Amravati "> Amravati </option>
+            <option value="Malegaon">Malegaon</option>
+            <option value="Kolhapur">Kolhapur</option>
+            <option value="Nanded">Nanded</option>
+            <option value=" Sangli">   Sangli</option>
+            <option value="Bhiwandi-Nizampur">Bhiwandi-Nizampur</option>
+            <option value="Akola">Akola</option>
+            <option value="Latur">Latur</option>
+            <option value="Ahmednagar"> Ahmednagar</option>
+            <option value="Jalgaon">Jalgaon</option>
+            <option value="Ichalkaranji">Ichalkaranji</option>
+            <option value="Chandrapur">Chandrapur</option>
+             <option value="Parbhani">Parbhani</option> 
+             <option value="Jalna">Jalna</option>
+              <option value="Bhusawal ">Bhusawal </option>
+               <option value="Panvel">Panvel</option>
+                <option value="Satara">Satara</option>
+                 <option value="Beed">Beed</option>
+                  <option value="Yavatmal">Yavatmal</option>
+                   <option value="Kamptee">Kamptee</option>
+                    <option value="Gondia">Gondia</option>
+                     <option value="Barshi">Barshi</option>
+                      <option value=" Achalpur"> Achalpur</option>
+                       <option value="Osmanabad">Osmanabad</option>
+                        <option value="Nandurbar">Nandurbar</option>
+                         <option value="Wardha">Wardha</option>
+                          <option value="Udgir">Udgir</option>
+     
+    </select>
+          </div>
+                
+       
+          <div class="col-sm-6">
+       <label>Manglik</label>
+           <div class="radio radio-inline">
+            <input type="radio" value="No" checked="checked" id="no2" name="manglikExp">
+            <label for="no2" class="malelable">No</label>
+          </div>
+          <div class="radio radio-inline">  
+            <input type="radio" name="manglikExp" id="yes2" value="Yes">
+            <label for="yes2" class="">Yes</label>
+          </div>
+          
+          <div class="radio radio-inline">  
+            <input type="radio" name="manglikExp" id="not_applicable2" value="NA">
+            <label for="not_applicable2" class="">Not Applicable</label>
+          </div>
+          </div>
+                
+        </div>
+    
+    <div class="form-group row">
+          <div class="col-sm-6">
+        <label>Height</label>     
+          <select  class="form-control" name="heightExp">
+                                <option selected="" value="">- Select -</option>
+                                <option value="1">Below 4ft</option>
+                                <option value="2">4ft 6in</option>
+                                <option value="3">4ft 7in</option>
+                                <option value="4">4ft 8in</option>
+                                <option value="5">4ft 9in</option>
+                                <option value="6">4ft 10in</option>
+                                <option value="7">4ft 11in</option>
+                                <option value="8">5ft</option>
+                                <option value="9">5ft 1in</option>
+                                <option value="10">5ft 2in</option>
+                                <option value="11">5ft 3in</option>
+                                <option value="12">5ft 4in</option>
+                                <option value="13">5ft 5in</option>
+                                <option value="14">5ft 6in</option>
+                                <option value="15">5ft 7in</option>
+                                <option value="16">5ft 8in</option>
+                                <option value="17">5ft 9in</option>
+                                <option value="18">5ft 10in</option>
+                                <option value="19">5ft 11in</option>
+                                <option value="20">6ft</option>
+                                <option value="21">6ft 1in</option>
+                                <option value="22">6ft 2in</option>
+                                <option value="23">6ft 3in</option>
+                                <option value="24">6ft 4in</option>
+                                <option value="25">6ft 5in</option>
+                                <option value="26">6ft 6in</option>
+                                <option value="27">6ft 7in</option>
+                                <option value="28">6ft 8in</option>
+                                <option value="29">6ft 9in</option>
+                                <option value="30">6ft 10in</option>
+                                <option value="31">6ft 11in</option>
+                                <option value="32">7ft</option>
+                                <option value="33">Above 7ft</option>
+                              </select>
+          </div>
+          <div class="col-sm-6">
+       <label>Education</label>
+          <select class="form-control" id="postedby" name="educationExp">
+            <option value="">Select</option>
+      <option value="Graduate">Graduate</option>
+      <option value="Post Graduate">Post Graduate</option>
+      <option value="Doctor">Doctor</option>
+      <option value="Engineer">Engineer</option>
+     
+    </select>
+          </div>  
+                
+        </div>
+  
+    
+    <div class="form-group row">
+          <div class="col-sm-6">
+      <label>Occupation</label>
+            <input class="form-control" type="text"  name="occupationExp">
+          </div>
+          <div class="col-sm-6">
+       <label>Income/Annum</label>
+            <input class="form-control" type="text" name="incomeExp" placeholder="Enter Expecting Annual Income">
+          </div>
+        </div>
+
+        <center>
+     <div class="">
+              <input type="checkbox" name="Accept" value="I Accept" required>
+              <label for="terms">I Accept the terms and Conditions</label>
+            </div>
+
+</center>
+
+
+        <div class="form-group buttonWrapper">
+           <input type="submit" value="Submit" class="btn btnpink loginbtn btn-lg">
+        </div>
+        </div>
+
+
+    </div>
+  </form>
+
+  </section>
+  <!--space beetwin main_wrrap & ooter-->
+<!-- footer -->
+	<div class="footer-w3layouts">
+		<div class="container">
+			<div class="agile-logo">
+				<a href="index.html">मराठा वधू-वर केन्द्</a>
+			</div>
+			<div class="agile-copy">
+				<p>© 2018. All rights reserved | Design by <a href="">Eagle Infotech</a></p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="thim-click-to-bottom">
+			<a href="#home" class="scroll">
+			<i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+		</a>
+		</div>
+	</div>
+	<!-- //footer -->
+
+
+<!-- conform pswrd validation -->
+    <script>
+var password = document.getElementById("inputPassword")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
+
+<!-- //datepicker -->
+
+<script>
+$(function(){
+    var dtToday = new Date();
+    
+    var month = dtToday.getMonth() + 1;
+    var day = dtToday.getDate();
+    var year = dtToday.getFullYear();
+    if(month < 10)
+        month = '0' + month.toString();
+    if(day < 10)
+        day = '0' + day.toString();
+    
+    var maxDate = year + '-' + month + '-' + day;
+    
+    $('#txtDate').attr('max', maxDate);
+});
+</script>
+
+
+  
+<!-- //validation -->
+<script>
+var alpha = "[ A-Za-z]";
+var numeric = "[0-9]"; 
+var alphanumeric = "[ A-Za-z0-9]"; 
+
+function onKeyValidate(e,charVal){
+    var keynum;
+    var keyChars = /[\x00\x08]/;
+    var validChars = new RegExp(charVal);
+    if(window.event)
+    {
+        keynum = e.keyCode;
+    }
+    else if(e.which)
+    {
+        keynum = e.which;
+    }
+    var keychar = String.fromCharCode(keynum);
+    if (!validChars.test(keychar) && !keyChars.test(keychar))   {
+        return false
+    } else{
+        return keychar;
+    }
+}
+</script>
+
+
+
+<!-- <script>
+//contact validation
+function validatephone(xxxxx) 
+{
+  var maintainplus = '';
+  var numval = xxxxx.value
+  if ( numval.charAt(0)=='+' )
+  {
+    var maintainplus = '';
+  }
+  curphonevar = numval.replace(/[\\A-Za-z!"ÃÂ£$%^&\-\)\(*+_={};:'@#~,.ÃÂ \/<>\" "\?|`ÃÂ¬\]\[]/g,'');
+  xxxxx.value = maintainplus + curphonevar;
+  var maintainplus = '';
+  xxxxx.focus;
+}
+</script> -->
+</body>
+</html>

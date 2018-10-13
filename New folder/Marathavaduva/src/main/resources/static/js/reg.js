@@ -1,0 +1,150 @@
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.subcaste = [
+    	{name : "Select"},
+    	{name : "Deshmukh"},
+        {name : "96 Kuli"},
+        {name : "Maratha"},
+        {name : "Deshmukh"},
+        {name : "Kunbi"},
+        {name : "Deshmukh Maratha"},
+        {name : "96 Kuli Maratha"},
+        {name : "Tirale Kunbi"}
+    ];
+    
+    $scope.profileCreatedBy = [
+    	{name : "Select"},
+    	{name : "Self"},
+        {name : "Parents"},
+        {name : "Brother"},
+        {name : "Sister"},
+        {name : "Friend"},
+        {name : "Relative"}
+    ];
+    
+    $scope.moonsign = [
+    	{name : "Select"},
+        {name : "Does not matter"},
+        {name : "Mesh (Aries)"},
+        {name : "Vrishabh (Taurus)"},
+        {name : "Mithun (Gemini)"},
+        {name : "Karka (Cancer)"},
+        {name : "Simha (Leo)"},
+        {name : "Kanya (Virgo)"},
+        {name : "Tula (Libra)"},
+        {name : "Vrischika (Scorpio)"},
+        {name : "Dhanu (Sagittarious)"},
+        {name : "Makar (Capricorn)"},
+        {name : "Kumbha (Aquarious)"},
+        {name : "Meen (Pisces)"}
+    ];
+    
+    $scope.heigth = [
+    	{name : "Select"},
+    	{name : "Below 4ft"},
+        {name : "4ft 6in"},
+        {name : "4ft 7in"},
+        {name : "4ft 8in"},
+        {name : "4ft 9in"},
+        {name : "4ft 10in"},
+        {name : "4ft 11in"},
+        {name : "5ft"},
+        {name : "5ft 1in"},
+        {name : "5ft 2in"},
+        {name : "5ft 3in"},
+        {name : "5ft 4in"},
+        {name : "5ft 5in"},
+        {name : "5ft 6in"},
+        {name : "5ft 7in"},
+        {name : "5ft 8in"},
+        {name : "5ft 9in"},
+        {name : "5ft 10in"},
+        {name : "5ft 11in"},
+        {name : "6ft"},
+        {name : "6ft 1in"},
+        {name : "6ft 2in"},
+        {name : "6ft 3in"},
+        {name : "6ft 4in"},
+        {name : "6ft 5in"},
+        {name : "6ft 6in"},
+        {name : "6ft 7in"},
+        {name : "6ft 8in"},
+        {name : "6ft 9in"},
+        {name : "6ft 10in"},
+        {name : "6ft 11in"},
+        {name : "7ft"},
+        {name : "Above 7ft"}
+    ];
+    
+    $scope.weight = [
+    	{name : "Select"},
+    	{name : "41 kg"},
+        {name : "42 kg"},
+        {name : "43 kg"},
+        {name : "44 kg"},
+        {name : "45 kg"},
+        {name : "46 kg"},
+        {name : "47 kg"},
+        {name : "48 kg"},
+        {name : "49 kg"},
+        {name : "50 kg"},
+        {name : "51 kg"},
+        {name : "52 kg"},
+        {name : "53 kg"},
+        {name : "54 kg"},
+        {name : "55 kg"},
+        {name : "56 kg"},
+        {name : "57 kg"},
+        {name : "58 kg"},
+        {name : "59 kg"},
+        {name : "60 kg"},
+        {name : "61 kg"},
+        {name : "62 kg"},
+        {name : "63 kg"},
+        {name : "64 kg"},
+        {name : "65 kg"},
+        {name : "66 kg"},
+        {name : "67 kg"},
+        {name : "68 kg"},
+        {name : "69 kg"},
+        {name : "70 kg"},
+        {name : "71 kg"},
+        {name : "72 kg"},
+        {name : "73 kg"},
+        {name : "74 kg"},
+        {name : "75 kg"},
+        {name : "76 kg"},
+        {name : "77 kg"},
+        {name : "78 kg"},
+        {name : "79 kg"},
+        {name : "80 kg"},
+        {name : "81 kg"},
+        {name : "82 kg"},
+        {name : "83 kg"},
+        {name : "84 kg"},
+        {name : "85 kg"},
+        {name : "86 kg"},
+        {name : "87 kg"},
+        {name : "88 kg"},
+        {name : "89 kg"},
+        {name : "90 kg"},
+        {name : "91 kg"},
+        {name : "92 kg"},
+        {name : "93 kg"},
+        {name : "94 kg"},
+        {name : "95 kg"},
+        {name : "96 kg"},
+        {name : "97 kg"},
+        {name : "98 kg"},
+        {name : "99 kg"},
+        {name : "100 kg"},
+        {name : "Above 100 kg"}
+    ];
+   
+    $scope.posts = [{id: 1}, {id: 2}];
+    
+    $scope.funcName = function(id) {
+      return IMAGES[id];
+    };
+});
+
